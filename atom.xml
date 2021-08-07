@@ -6,7 +6,7 @@
   <link href="http://hyjwpk.github.io/atom.xml" rel="self"/>
   
   <link href="http://hyjwpk.github.io/"/>
-  <updated>2021-08-07T07:14:16.160Z</updated>
+  <updated>2021-08-07T18:04:12.082Z</updated>
   <id>http://hyjwpk.github.io/</id>
   
   <author>
@@ -17,11 +17,34 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>数独</title>
+    <link href="http://hyjwpk.github.io/2021/08/08/shu-du/"/>
+    <id>http://hyjwpk.github.io/2021/08/08/shu-du/</id>
+    <published>2021-08-07T18:02:34.000Z</published>
+    <updated>2021-08-07T18:04:12.082Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;程序设计II大作业实验报告&quot;&gt;&lt;a href=&quot;#程序设计II大作业实验报告&quot; class=&quot;headerlink&quot; title=&quot;程序设计II大作业实验报告&quot;&gt;&lt;/a&gt;程序设计II大作业实验报告&lt;/h1&gt;&lt;h2 id=&quot;实验题目与要求&quot;&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    
+    <category term="大作业" scheme="http://hyjwpk.github.io/tags/%E5%A4%A7%E4%BD%9C%E4%B8%9A/"/>
+    
+  </entry>
+  
+  <entry>
     <title>OJ习题报告(上机2)</title>
     <link href="http://hyjwpk.github.io/2021/08/07/oj-xi-ti/"/>
     <id>http://hyjwpk.github.io/2021/08/07/oj-xi-ti/</id>
     <published>2021-08-07T05:25:50.000Z</published>
-    <updated>2021-08-07T07:14:16.160Z</updated>
+    <updated>2021-08-07T17:49:15.373Z</updated>
     
     
       
@@ -34,6 +57,8 @@
     
     
     
+    
+    <category term="OJ" scheme="http://hyjwpk.github.io/tags/OJ/"/>
     
   </entry>
   
