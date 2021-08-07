@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Hello World, Hyjwpk">
+    <meta name="keywords" content="OJ习题报告(上机2), Hyjwpk">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>Hello World | Hyjwpk</title>
+    <title>OJ习题报告(上机2) | Hyjwpk</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -314,12 +314,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/12.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/9.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Hello World</h1>
+                    <h1 class="description center-align post-title">OJ习题报告(上机2)</h1>
                 </div>
             </div>
         </div>
@@ -456,14 +456,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    73
+                    755
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    2 分
                 </div>
                 
 
@@ -481,19 +481,73 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ hexo new <span class="token string">"My New Post"</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+                <h2 id="题目与要求"><a href="#题目与要求" class="headerlink" title="题目与要求"></a>题目与要求</h2><h3 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h3><p>Time limit: 1000 ms</p>
+<p>Memory limit: 256 MB</p>
+<p>Standard I/O</p>
+<p>仔细学习老师关于“递归”的ppt之后,你学会了如何将一个逆波兰式转换回原本的表达式；只是,有些时候,你会输出大量多余的括号。<br>这次,我们仍旧要将一个逆波兰式转换回一个正常的表达式—— 但不能输出任何多余的括号 。</p>
+<p>【警告】可以使用栈,但不允许使用C++的std::stack</p>
+<p><a target="_blank" rel="noopener" href="https://git.ustc.edu.cn/programming-ii-spring2021/DiscussionBoard/-/issues/15">【逆逆波兰式】题面中的“多余”说明</a></p>
+<h3 id="输入描述"><a href="#输入描述" class="headerlink" title="输入描述"></a>输入描述</h3><p>输入有且只有一行,行末回车符前只会出现“+”“-”“*”“/”和数字“0”到“9”；数字至少出现一次,每一个数字代表一个单独的数值（原表达式和逆波兰式中的数都是一位数）。</p>
+<h3 id="输出描述"><a href="#输出描述" class="headerlink" title="输出描述"></a>输出描述</h3><p>输出包括一行,为输入逆波兰式对应的原表达式,但不能有任何多余的括号！</p>
+<ul>
+<li><p>样例输入 123++<br>  样例输出 1+(2+3)</p>
+</li>
+<li><p>样例输入 12+3+<br>  样例输出 1+2+3</p>
+</li>
+<li><p>样例输入 12+34+*<br>  样例输出 (1+2)*(3+4)</p>
+</li>
+<li><p>样例输入 123*+<br>  样例输出 1+2*3</p>
+</li>
+</ul>
+<h2 id="具体设计"><a href="#具体设计" class="headerlink" title="具体设计"></a>具体设计</h2><p>该部分<strong>简单介绍</strong>题目实现的细节,例如,包括哪些函数,函数参数是什么,作用是什么等。</p>
+<p>主要思路是使用分治法来将逆波兰式拆分成多个子式,递归地拆分直到拆到单个的数字或者符号,再将各部分按顺序拼接就得到了原表达式</p>
+<pre class="line-numbers language-C" data-language="C"><code class="language-C">void transfer(char symbol,char condition)// The expression in result is in reverse order,condition is a symbol of right(1) or left(0)
+{
+	char symnow=expression[position--];
+	if(symnow&gt;='0'&amp;&amp;symnow&lt;='9') result[strlen(result)]=symnow;
+	else
+	{
+		//Judge whether it is necessary to add the brackets
+		if((compare(symnow)&lt;compare(symbol))||(compare(symnow)==compare(symbol)&amp;&amp;condition==1))
+		{
+			result[strlen(result)]=')';
+			transfer(symnow,1);
+			result[strlen(result)]=symnow;
+			transfer(symnow,0);
+			result[strlen(result)]='(';
+		}
+		else
+		{
+			transfer(symnow,1);
+			result[strlen(result)]=symnow;
+			transfer(symnow,0);
+		}
+	}
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ hexo server<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p><code>symbol</code>表示当前拆分的式子的连接符号,<code>condition</code>用于表示函数操作的子式位于符号的左侧（0）或是符号的右侧（1）,<code>result</code>用于存放结果,<code>expression</code>存放初始的表达式,<code>position</code>是全局变量表示现在读取的字符位置</p>
+<p><code>int compare(char sym)</code>函数用于将符号转化为优先级返回</p>
+<pre class="line-numbers language-C" data-language="C"><code class="language-C">int compare(char sym)
+{
+	switch (sym)
+	{
+		case '+': case '-': return 1;
+		case '*': case '/': return 2;
+		default : return 0;
+	}
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ hexo generate<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ hexo deploy<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+<h2 id="实验过程"><a href="#实验过程" class="headerlink" title="实验过程"></a>实验过程</h2><p>该部分介绍实验中遇到的bug与报错</p>
+<ul>
+<li><p>bug内容<br>  输出了多余的括号</p>
+</li>
+<li><p>bug原因<br>  未考虑基本运算顺序是从左到右的,这会使得在左侧的表达式有时不需要加括号</p>
+</li>
+<li><p>解决方案<br>  加入<code>condition</code>来标识表达式在符号的两侧位置来判断是否需要加括号</p>
+</li>
+</ul>
+<h2 id="实验总结"><a href="#实验总结" class="headerlink" title="实验总结"></a>实验总结</h2><p>该部分介绍实验中的收获。</p>
+<p>通过这次上机实验了解了逆波兰式这种表达式表示方法,同时对使用分治以及递归解决问题有了更深入的理解<span class="github-emoji"><span>😄</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f604.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span></p>
 
                 
             </div>
@@ -520,7 +574,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://hyjwpk.github.io/2021/08/07/hello-world/">http://hyjwpk.github.io/2021/08/07/hello-world/</a>
+                    <a href="http://hyjwpk.github.io/2021/08/07/oj-xi-ti/">http://hyjwpk.github.io/2021/08/07/oj-xi-ti/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -599,9 +653,10 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
                 <a href="/2021/08/07/oj-xi-ti/">
                     <div class="card-image">
@@ -619,9 +674,9 @@
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-08-07
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-08-07
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-user fa-fw"></i>
@@ -630,6 +685,7 @@
                         </span>
                     </div>
                 </div>
+
                 
             </div>
         </div>
@@ -637,7 +693,7 @@
         
         <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge right-badge text-color">
-                本篇&nbsp;<i class="far fa-dot-circle"></i>
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
                 <a href="/2021/08/07/hello-world/">
@@ -667,7 +723,6 @@
                         </span>
                     </div>
                 </div>
-
                 
             </div>
         </div>
