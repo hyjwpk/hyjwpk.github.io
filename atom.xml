@@ -6,7 +6,7 @@
   <link href="http://hyjwpk.github.io/atom.xml" rel="self"/>
   
   <link href="http://hyjwpk.github.io/"/>
-  <updated>2021-08-07T18:04:12.082Z</updated>
+  <updated>2021-08-08T03:55:29.287Z</updated>
   <id>http://hyjwpk.github.io/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Hexo博客搭建教程</title>
+    <link href="http://hyjwpk.github.io/2021/08/08/jian-zhan/"/>
+    <id>http://hyjwpk.github.io/2021/08/08/jian-zhan/</id>
+    <published>2021-08-08T02:02:23.000Z</published>
+    <updated>2021-08-08T03:55:29.287Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;简介&quot;&gt;&lt;a href=&quot;#简介&quot; class=&quot;headerlink&quot; title=&quot;简介&quot;&gt;&lt;/a&gt;简介&lt;/h1&gt;&lt;p&gt;本篇文章介绍Windows 10系统通过Hexo生成静态站点并上传至github的过程&lt;/p&gt;
+&lt;h1 id=&quot;安装Node-js&quot;&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    
+    <category term="blog" scheme="http://hyjwpk.github.io/tags/blog/"/>
+    
+    <category term="教程" scheme="http://hyjwpk.github.io/tags/%E6%95%99%E7%A8%8B/"/>
+    
+  </entry>
   
   <entry>
     <title>数独</title>
