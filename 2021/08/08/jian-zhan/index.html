@@ -29,9 +29,9 @@
 
     <script src="/libs/jquery/jquery.min.js"></script>
 
-<meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/atom.xml" title="Hyjwpk" type="application/atom+xml">
-
+<meta name="generator" content="Hexo 5.4.0">
 <style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+<link rel="alternate" href="/atom.xml" title="Hyjwpk" type="application/atom+xml">
 </head>
 
 <script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
@@ -460,22 +460,32 @@
                 
 
                 
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
+                    2021-08-08
+                </div>
+                
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    4.7k
+                    5.5k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    18 分
+                    22 分
                 </div>
                 
 
                 
+                    <div id="busuanzi_container_page_pv" class="info-break-policy">
+                        <i class="far fa-eye fa-fw"></i>阅读次数:&nbsp;&nbsp;
+                        <span id="busuanzi_value_page_pv"></span>
+                    </div>
+				
             </div>
         </div>
         <hr class="clearfix">
@@ -501,15 +511,95 @@
 
 <p>执行<code>hexo g</code>生成静态文件, 执行<code>hexo s</code>启动服务器。默认情况下，访问网址为:<code>http://localhost:4000/</code></p>
 <h1 id="Github-Pages"><a href="#Github-Pages" class="headerlink" title="Github Pages"></a>Github Pages</h1><p>每个github账号都可以发布自己的静态网站,域名为<code>username.github.io</code></p>
-<h2 id="注册github账号"><a href="#注册github账号" class="headerlink" title="注册github账号"></a>注册github账号</h2><h2 id="安装git"><a href="#安装git" class="headerlink" title="安装git"></a>安装git</h2><h2 id="新建库"><a href="#新建库" class="headerlink" title="新建库"></a>新建库</h2><p>在github上新建名为username.github.io的库(注意:username必须为github对应的用户名)，新建完成后在项目的Settings-Pages中Choose a theme就完成了对github网页仓库的配置</p>
-<h2 id="关联本地网站与github库"><a href="#关联本地网站与github库" class="headerlink" title="关联本地网站与github库"></a>关联本地网站与github库</h2><p>修改本地根目录中的_config.yml文件中的deploy配置如下</p>
+<h2 id="注册github账号"><a href="#注册github账号" class="headerlink" title="注册github账号"></a>注册github账号</h2><h2 id="安装git"><a href="#安装git" class="headerlink" title="安装git"></a>安装git</h2><h2 id="新建库"><a href="#新建库" class="headerlink" title="新建库"></a>新建库</h2><p>在github上新建名为 <code>username.github.io</code> 的库(注意:username必须为github对应的用户名)，新建完成后在项目的 <code>Settings-Pages</code> 中 <code>Choose a theme</code> 就完成了对github网页仓库的配置</p>
+<h2 id="关联本地网站与github库"><a href="#关联本地网站与github库" class="headerlink" title="关联本地网站与github库"></a>关联本地网站与github库</h2><p>修改本地根目录中的 <code>_config.yml</code> 文件中的deploy配置如下</p>
 <pre class="line-numbers language-yaml" data-language="yaml"><code class="language-yaml"><span class="token key atrule">deploy</span><span class="token punctuation">:</span>
   <span class="token key atrule">type</span><span class="token punctuation">:</span> git
   <span class="token key atrule">repository</span><span class="token punctuation">:</span> https<span class="token punctuation">:</span>//github.com/username/username.github.io
   <span class="token key atrule">branch</span><span class="token punctuation">:</span> main<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
 
-<p>username应替换为自己的用户名,branch应为github库的主分支</p>
+<p><code>username</code> 应替换为自己的用户名, <code>branch</code> 应为github库的主分支</p>
 <p>在本地目录打开git bash,执行<code>npm install hexo-deployer-git --save</code>安装hexo-deployer-git,安装完成后运行<code>hexo d</code>即可推送至github库</p>
+<h2 id="基本指令"><a href="#基本指令" class="headerlink" title="基本指令"></a>基本指令</h2><p>参照<a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/docs/commands#init">hexo官网</a></p>
+<h3 id="clean"><a href="#clean" class="headerlink" title="clean"></a>clean</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">hexo clean<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>清除缓存文件 (db.json) 和已生成的静态文件 (public)。</p>
+<p>在某些情况（尤其是更换主题后），如果发现您对站点的更改无论如何也不生效，您可能需要运行该命令。</p>
+<h3 id="generate"><a href="#generate" class="headerlink" title="generate"></a>generate</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ hexo generate<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>生成静态文件。</p>
+<table>
+<thead>
+<tr>
+<th>选项</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>-d</code>, <code>--deploy</code></td>
+<td>文件生成后立即部署网站</td>
+</tr>
+<tr>
+<td><code>-w</code>, <code>--watch</code></td>
+<td>监视文件变动</td>
+</tr>
+<tr>
+<td><code>-b</code>, <code>--bail</code></td>
+<td>生成过程中如果发生任何未处理的异常则抛出异常</td>
+</tr>
+<tr>
+<td><code>-f</code>, <code>--force</code></td>
+<td>强制重新生成文件<br>Hexo 引入了差分机制，如果 <code>public</code> 目录存在，那么 <code>hexo g</code> 只会重新生成改动的文件。<br>使用该参数的效果接近 <code>hexo clean &amp;&amp; hexo generate</code></td>
+</tr>
+<tr>
+<td><code>-c</code>, <code>--concurrency</code></td>
+<td>最大同时生成文件的数量，默认无限制</td>
+</tr>
+</tbody></table>
+<p>该命令可以简写为</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ hexo g<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<h3 id="server"><a href="#server" class="headerlink" title="server"></a>server</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ hexo server<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>启动服务器。默认情况下，访问网址为： <code>http://localhost:4000/</code>。</p>
+<table>
+<thead>
+<tr>
+<th>选项</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>-p</code>, <code>--port</code></td>
+<td>重设端口</td>
+</tr>
+<tr>
+<td><code>-s</code>, <code>--static</code></td>
+<td>只使用静态文件</td>
+</tr>
+<tr>
+<td><code>-l</code>, <code>--log</code></td>
+<td>启动日记记录，使用覆盖记录格式</td>
+</tr>
+</tbody></table>
+<h3 id="deploy"><a href="#deploy" class="headerlink" title="deploy"></a>deploy</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ hexo deploy<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>部署网站。</p>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>-g</code>, <code>--generate</code></td>
+<td>部署之前预先生成静态文件</td>
+</tr>
+</tbody></table>
+<p>该命令可以简写为：</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ hexo d<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
 <h1 id="Matery-主题"><a href="#Matery-主题" class="headerlink" title="Matery 主题"></a>Matery 主题</h1><p>以下介绍主要来自<a target="_blank" rel="noopener" href="https://github.com/blinkfox/hexo-theme-matery/blob/develop/README_CN.md">Matery主题中文说明文档</a>,并稍加改动</p>
 <h2 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h2><p>点击 <a target="_blank" rel="noopener" href="https://codeload.github.com/blinkfox/hexo-theme-matery/zip/master">这里</a> 下载 <code>master</code> 分支的最新稳定版的代码，解压缩后，将 <code>hexo-theme-matery</code> 的文件夹复制到你 Hexo 的 <code>themes</code> 文件夹中即可。</p>
 <p>当然你也可以在你的 <code>themes</code> 文件夹下使用 <code>git clone</code> 命令来下载:</p>
@@ -600,9 +690,7 @@
     <span class="token property">"title"</span><span class="token operator">:</span> <span class="token string">"前去学习"</span>
 <span class="token punctuation">}</span><span class="token punctuation">]</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <h3 id="新建-404-页"><a href="#新建-404-页" class="headerlink" title="新建 404 页"></a>新建 404 页</h3><p>如果在你的博客 <code>source</code> 目录下还没有 <code>404.md</code> 文件，那么你就需要新建一个</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">hexo new page <span class="token number">404</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<p>编辑你刚刚新建的页面文件 <code>/source/404/index.md</code>，至少需要以下内容：</p>
+<p>编辑你刚刚新建的页面文件 <code>/source/404.md</code>，至少需要以下内容：</p>
 <pre class="line-numbers language-yaml" data-language="yaml"><code class="language-yaml"><span class="token punctuation">---</span>
 <span class="token key atrule">title</span><span class="token punctuation">:</span> <span class="token number">404</span>
 <span class="token key atrule">date</span><span class="token punctuation">:</span> <span class="token datetime number">2018-09-30 17:25:30</span>
@@ -612,6 +700,7 @@
 <span class="token punctuation">---</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <h3 id="菜单导航配置"><a href="#菜单导航配置" class="headerlink" title="菜单导航配置"></a>菜单导航配置</h3><h4 id="配置基本菜单导航的名称、路径url和图标icon"><a href="#配置基本菜单导航的名称、路径url和图标icon" class="headerlink" title="配置基本菜单导航的名称、路径url和图标icon."></a>配置基本菜单导航的名称、路径url和图标icon.</h4><p>1.菜单导航名称可以是中文也可以是英文(如：<code>Index</code>或<code>主页</code>)<br>2.图标icon 可以在<a target="_blank" rel="noopener" href="https://fontawesome.com/icons">Font Awesome</a> 中查找   </p>
+<p>修改主题目录下的 <code>_config.yml</code></p>
 <pre class="line-numbers language-yaml" data-language="yaml"><code class="language-yaml"><span class="token key atrule">menu</span><span class="token punctuation">:</span>
   <span class="token key atrule">Index</span><span class="token punctuation">:</span>
     <span class="token key atrule">url</span><span class="token punctuation">:</span> /
@@ -692,6 +781,9 @@
   <span class="token key atrule">tab_replace</span><span class="token punctuation">:</span> <span class="token string">''</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p>主题中默认的 <code>prismjs</code> 主题是 <code>Tomorrow Night</code>，如果你想定制自己的主题，可以前往 <a target="_blank" rel="noopener" href="https://prismjs.com/download.html">prismjs 下载页面</a> 定制下载自己喜欢的主题 <code>css</code> 文件，然后将此 css 主题文件取名为 <code>prism.css</code>，替换掉 <code>hexo-theme-matery</code> 主题文件夹中的 <code>source/libs/prism/prism.css</code> 文件即可。</p>
+<p>下载 <code>prism.js</code> ,放入主题文件夹中的<code>source/js</code>,并在 <code>layout/layout.ejs</code> 中添加</p>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token operator">&lt;</span>script src<span class="token operator">=</span><span class="token string">"/js/prism.js"</span><span class="token operator">&gt;</span><span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">&gt;</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
 <h3 id="搜索"><a href="#搜索" class="headerlink" title="搜索"></a>搜索</h3><p>本主题中还使用到了 <a target="_blank" rel="noopener" href="https://github.com/wzpan/hexo-generator-search">hexo-generator-search</a> 的 Hexo 插件来做内容搜索，安装命令如下：</p>
 <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">npm</span> <span class="token function">install</span> hexo-generator-search --save<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
@@ -754,6 +846,9 @@
 <h3 id="添加-DaoVoice-在线聊天功能（可选的）"><a href="#添加-DaoVoice-在线聊天功能（可选的）" class="headerlink" title="添加 DaoVoice 在线聊天功能（可选的）"></a>添加 <a target="_blank" rel="noopener" href="http://www.daovoice.io/">DaoVoice</a> 在线聊天功能（可选的）</h3><p>前往 <a target="_blank" rel="noopener" href="http://www.daovoice.io/">DaoVoice</a> 官网注册并且获取 <code>app_id</code>，并将 <code>app_id</code> 填入主题的 <code>_config.yml</code> 文件中。</p>
 <h3 id="添加-Tidio-在线聊天功能（可选的）"><a href="#添加-Tidio-在线聊天功能（可选的）" class="headerlink" title="添加 Tidio 在线聊天功能（可选的）"></a>添加 <a target="_blank" rel="noopener" href="https://www.tidio.com/">Tidio</a> 在线聊天功能（可选的）</h3><p>前往 <a target="_blank" rel="noopener" href="https://www.tidio.com/">Tidio</a> 官网注册并且获取 <code>Public Key</code>，并将 <code>Public Key</code> 填入主题的 <code>_config.yml</code> 文件中。</p>
 <h3 id="修改页脚"><a href="#修改页脚" class="headerlink" title="修改页脚"></a>修改页脚</h3><p>页脚信息可能需要做定制化修改，而且它不便于做成配置信息，所以可能需要你自己去再修改和加工。修改的地方在主题文件的 <code>/layout/_partial/footer.ejs</code> 文件中，包括站点、使用的主题、访问量等。</p>
+<blockquote>
+<p><strong>注</strong>：在本地访问量未从0开始统计,上传至github后即可正常显示</p>
+</blockquote>
 <h3 id="修改社交链接"><a href="#修改社交链接" class="headerlink" title="修改社交链接"></a>修改社交链接</h3><p>在主题的 <code>_config.yml</code> 文件中，默认支持 <code>QQ</code>、<code>GitHub</code> 和邮箱等的配置，你可以在主题文件的 <code>/layout/_partial/social-link.ejs</code> 文件中，新增、修改你需要的社交链接地址，增加链接可参考如下代码：</p>
 <pre class="line-numbers language-html" data-language="html"><code class="language-html">&lt;% if (theme.socialLink.github) { %&gt;
     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>&lt;%= theme.socialLink.github %&gt;<span class="token punctuation">"</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>tooltipped<span class="token punctuation">"</span></span> <span class="token attr-name">target</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>_blank<span class="token punctuation">"</span></span> <span class="token attr-name">data-tooltip</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>访问我的GitHub<span class="token punctuation">"</span></span> <span class="token attr-name">data-position</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>top<span class="token punctuation">"</span></span> <span class="token attr-name">data-delay</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>50<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
@@ -780,23 +875,25 @@
 </blockquote>
 <h3 id="修改打赏的二维码图片"><a href="#修改打赏的二维码图片" class="headerlink" title="修改打赏的二维码图片"></a>修改打赏的二维码图片</h3><p>在主题文件的 <code>source/medias/reward</code> 文件中，你可以替换成你的的微信和支付宝的打赏二维码图片。</p>
 <h3 id="配置音乐播放器（可选的）"><a href="#配置音乐播放器（可选的）" class="headerlink" title="配置音乐播放器（可选的）"></a>配置音乐播放器（可选的）</h3><p>要支持音乐播放，在主题的 <code>_config.yml</code> 配置文件中激活music配置即可：</p>
-<pre class="line-numbers language-yaml" data-language="yaml"><code class="language-yaml"><span class="token comment"># 是否在首页显示音乐</span>
+<pre class="line-numbers language-yaml" data-language="yaml"><code class="language-yaml"><span class="token comment"># 是否在首页显示音乐.</span>
 <span class="token key atrule">music</span><span class="token punctuation">:</span>
   <span class="token key atrule">enable</span><span class="token punctuation">:</span> <span class="token boolean important">true</span>
-  <span class="token key atrule">title</span><span class="token punctuation">:</span>     	    <span class="token comment"># 非吸底模式有效</span>
+  <span class="token key atrule">title</span><span class="token punctuation">:</span> <span class="token comment">#非吸底模式有效</span>
     <span class="token key atrule">enable</span><span class="token punctuation">:</span> <span class="token boolean important">true</span>
     <span class="token key atrule">show</span><span class="token punctuation">:</span> 听听音乐
-  <span class="token key atrule">server</span><span class="token punctuation">:</span> netease   <span class="token comment"># require music platform: netease, tencent, kugou, xiami, baidu</span>
-  <span class="token key atrule">type</span><span class="token punctuation">:</span> playlist    <span class="token comment"># require song, playlist, album, search, artist</span>
-  <span class="token key atrule">id</span><span class="token punctuation">:</span> <span class="token number">503838841</span>     <span class="token comment"># require song id / playlist id / album id / search keyword</span>
-  <span class="token key atrule">fixed</span><span class="token punctuation">:</span> <span class="token boolean important">false</span>      <span class="token comment"># 开启吸底模式</span>
+  <span class="token key atrule">autoHide</span><span class="token punctuation">:</span> <span class="token boolean important">true</span>    <span class="token comment"># hide automaticaly</span>
+  <span class="token key atrule">server</span><span class="token punctuation">:</span> netease   <span class="token comment">#require	music platform: netease, tencent, kugou, xiami, baidu</span>
+  <span class="token key atrule">type</span><span class="token punctuation">:</span> playlist    <span class="token comment">#require song, playlist, album, search, artist</span>
+  <span class="token key atrule">id</span><span class="token punctuation">:</span> <span class="token number">2722795475</span>    <span class="token comment">#require	song id / playlist id / album id / search keyword</span>
+  <span class="token key atrule">fixed</span><span class="token punctuation">:</span> <span class="token boolean important">true</span>       <span class="token comment"># 开启吸底模式</span>
   <span class="token key atrule">autoplay</span><span class="token punctuation">:</span> <span class="token boolean important">false</span>   <span class="token comment"># 是否自动播放</span>
   <span class="token key atrule">theme</span><span class="token punctuation">:</span> <span class="token string">'#42b983'</span>
   <span class="token key atrule">loop</span><span class="token punctuation">:</span> <span class="token string">'all'</span>       <span class="token comment"># 音频循环播放, 可选值: 'all', 'one', 'none'</span>
   <span class="token key atrule">order</span><span class="token punctuation">:</span> <span class="token string">'random'</span>   <span class="token comment"># 音频循环顺序, 可选值: 'list', 'random'</span>
   <span class="token key atrule">preload</span><span class="token punctuation">:</span> <span class="token string">'auto'</span>   <span class="token comment"># 预加载，可选值: 'none', 'metadata', 'auto'</span>
   <span class="token key atrule">volume</span><span class="token punctuation">:</span> <span class="token number">0.7</span>       <span class="token comment"># 默认音量，请注意播放器会记忆用户设置，用户手动设置音量后默认音量即失效</span>
-  <span class="token key atrule">listFolded</span><span class="token punctuation">:</span> <span class="token boolean important">true</span>  <span class="token comment"># 列表默认折叠</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+  <span class="token key atrule">listFolded</span><span class="token punctuation">:</span> <span class="token boolean important">true</span>  <span class="token comment"># 列表默认折叠</span>
+  <span class="token key atrule">hideLrc</span><span class="token punctuation">:</span> <span class="token boolean important">true</span>     <span class="token comment"># 隐藏歌词</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <blockquote>
 <p><code>server</code>可选<code>netease</code>（网易云音乐），<code>tencent</code>（QQ音乐），<code>kugou</code>（酷狗音乐），<code>xiami</code>（虾米音乐），</p>
@@ -929,11 +1026,6 @@
   <span class="token punctuation">-</span> Markdown
 <span class="token punctuation">---</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<h2 id="效果截图"><a href="#效果截图" class="headerlink" title="效果截图"></a>效果截图</h2><p><img src="http://static.blinkfox.com/matery-20181202-1.png" alt="首页"></p>
-<p><img src="http://static.blinkfox.com/matery-20181202-2.png" alt="首页推荐文章"></p>
-<p><img src="http://static.blinkfox.com/matery-20181202-3.png" alt="首页文章列表"></p>
-<p><img src="http://static.blinkfox.com/matery-20181202-7.png" alt="首页文章列表"></p>
-<p><img src="http://static.blinkfox.com/matery-20181202-8.png" alt="首页文章列表"></p>
 <h2 id="自定制修改"><a href="#自定制修改" class="headerlink" title="自定制修改"></a>自定制修改</h2><p>在本主题的 <code>_config.yml</code> 中可以修改部分自定义信息，有以下几个部分：</p>
 <ul>
 <li>菜单</li>
@@ -955,27 +1047,87 @@
 <li><a target="_blank" rel="noopener" href="http://busuanzi.ibruce.info/">不蒜子统计</a>和谷歌分析（<code>Google Analytics</code>）</li>
 <li>默认特色图的集合。当文章没有设置特色图时，本主题会根据文章标题的 <code>hashcode</code> 值取余，来选择展示对应的特色图</li>
 </ul>
-<p><strong>我认为个人博客应该都有自己的风格和特色</strong>。如果本主题中的诸多功能和主题色彩你不满意，可以在主题中自定义修改，很多更自由的功能和细节点的修改难以在主题的 <code>_config.yml</code> 中完成，需要修改源代码才来完成。以下列出了可能对你有用的地方：</p>
+<h2 id="个人配置"><a href="#个人配置" class="headerlink" title="个人配置"></a>个人配置</h2><p>以下为个人所做的修改</p>
 <h3 id="修改主题颜色"><a href="#修改主题颜色" class="headerlink" title="修改主题颜色"></a>修改主题颜色</h3><p>在主题文件的 <code>/source/css/matery.css</code> 文件中，搜索 <code>.bg-color</code> 来修改背景颜色：</p>
 <pre class="line-numbers language-css" data-language="css"><code class="language-css"><span class="token comment">/* 整体背景颜色，包括导航、移动端的导航、页尾、标签页等的背景颜色. */</span>
 <span class="token selector">.bg-color</span> <span class="token punctuation">{</span>
-    <span class="token property">background-image</span><span class="token punctuation">:</span> <span class="token function">linear-gradient</span><span class="token punctuation">(</span>to right<span class="token punctuation">,</span> #4cbf30 0%<span class="token punctuation">,</span> #0f9d58 100%<span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
+    <span class="token property">background-image</span><span class="token punctuation">:</span> <span class="token function">linear-gradient</span><span class="token punctuation">(</span>to right<span class="token punctuation">,</span> #007FFF 0%<span class="token punctuation">,</span> #022E6A 100%<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
 
-<span class="token atrule"><span class="token rule">@-webkit-keyframes</span> rainbow</span> <span class="token punctuation">{</span>
-   <span class="token comment">/* 动态切换背景颜色. */</span>
-<span class="token punctuation">}</span>
-
-<span class="token atrule"><span class="token rule">@keyframes</span> rainbow</span> <span class="token punctuation">{</span>
-    <span class="token comment">/* 动态切换背景颜色. */</span>
-<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
+<p>此处修改为蓝色渐变色</p>
 <h3 id="修改-banner-图和文章特色图"><a href="#修改-banner-图和文章特色图" class="headerlink" title="修改 banner 图和文章特色图"></a>修改 banner 图和文章特色图</h3><p>你可以直接在 <code>/source/medias/banner</code> 文件夹中更换你喜欢的 <code>banner</code> 图片，主题代码中是每天动态切换一张，只需 <code>7</code> 张即可。如果你会 <code>JavaScript</code> 代码，可以修改成你自己喜欢切换逻辑，如：随机切换等，<code>banner</code> 切换的代码位置在 <code>/layout/_partial/bg-cover-content.ejs</code> 文件的 <code>&lt;script&gt;&lt;/script&gt;</code> 代码中：</p>
 <pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token function">$</span><span class="token punctuation">(</span><span class="token string">'.bg-cover'</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">css</span><span class="token punctuation">(</span><span class="token string">'background-image'</span><span class="token punctuation">,</span> <span class="token string">'url(/medias/banner/'</span> <span class="token operator">+</span> <span class="token keyword">new</span> <span class="token class-name">Date</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getDay</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token string">'.jpg)'</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <p>在 <code>/source/medias/featureimages</code> 文件夹中默认有 24 张特色图片，你可以再增加或者减少，并需要在 <code>_config.yml</code> 做同步修改。</p>
-<h2 id="版本变更记录"><a href="#版本变更记录" class="headerlink" title="版本变更记录"></a>版本变更记录</h2><p>参见 <a target="_blank" rel="noopener" href="https://github.com/blinkfox/hexo-theme-matery/blob/master/CHANGELOG.md">CHANGELOG.md</a></p>
+<p>也可在文章的img中显示指定图片,可以使用外部图床或相对路径来访问本地图片</p>
+<p>可以在根目录下的  <code>_config.yml</code> 将 <code>post_asset_folder</code> 设置为 <code>true</code> 这样在 <code>hexo new post</code> 时会自动创建同名文件夹用于存放图片</p>
+<h3 id="修改-banner-遮罩"><a href="#修改-banner-遮罩" class="headerlink" title="修改 banner 遮罩"></a>修改 banner 遮罩</h3><p>在主题文件的 <code>/source/css/matery.css</code> 文件中，搜索 <code>.bg-cover:after</code> 来修改背景颜色：</p>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token comment">/*
+.bg-cover:after {
+    -webkit-animation: rainbow 60s infinite;
+    animation: rainbow 60s infinite;
+}*/</span>
 
+<span class="token punctuation">.</span>bg<span class="token operator">-</span>cover<span class="token operator">:</span>after <span class="token punctuation">{</span>
+    <span class="token comment">/*
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    display: block;
+    left: 0;
+    top: 0;*/</span>
+    <span class="token comment">/*content: "";*/</span>
+    position<span class="token operator">:</span> absolute<span class="token punctuation">;</span>
+    top<span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">;</span>
+    left<span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">;</span>
+    content<span class="token operator">:</span> <span class="token string">""</span><span class="token punctuation">;</span>
+    background<span class="token operator">-</span>color<span class="token operator">:</span> gray<span class="token punctuation">;</span>
+    opacity<span class="token operator">:</span> <span class="token number">0.1</span><span class="token punctuation">;</span>
+    z<span class="token operator">-</span>index<span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">;</span>
+    width<span class="token operator">:</span> <span class="token number">100</span><span class="token operator">%</span><span class="token punctuation">;</span>
+    height<span class="token operator">:</span> <span class="token number">100</span><span class="token operator">%</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>此处删去遮罩变色效果并改用灰色透明遮罩以使主题突出</p>
+<h3 id="背景雪花"><a href="#背景雪花" class="headerlink" title="背景雪花"></a>背景雪花</h3><p>从<a target="_blank" rel="noopener" href="https://github.com/Yafine/cdn/blob/3.2.7/source/js/snow1.js">这里</a>获取js脚本后,创建并复制在主题文件夹下 <code>source/js/snow.js</code>中</p>
+<p>在主题文件夹下 <code>layout/layout.ejs</code> 中添加</p>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token operator">&lt;</span>script src<span class="token operator">=</span><span class="token string">"/js/snow.js"</span><span class="token operator">&gt;</span><span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">&gt;</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<h3 id="看板娘"><a href="#看板娘" class="headerlink" title="看板娘"></a>看板娘</h3><p>在主题文件夹下 <code>layout/layout.ejs</code> 中添加</p>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token operator">&lt;</span>script src<span class="token operator">=</span><span class="token string">"https://cdn.jsdelivr.net/gh/stevenjoezhang/live2d-widget@latest/autoload.js"</span><span class="token operator">&gt;</span><span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">&gt;</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<h3 id="动态标题"><a href="#动态标题" class="headerlink" title="动态标题"></a>动态标题</h3><p>在主题文件夹下 <code>layout/layout.ejs</code> 中添加</p>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token operator">&lt;</span>script type<span class="token operator">=</span><span class="token string">"text/javascript"</span><span class="token operator">&gt;</span>
+    <span class="token keyword">var</span> OriginTitile<span class="token operator">=</span>document<span class="token punctuation">.</span>title<span class="token punctuation">,</span>st<span class="token punctuation">;</span>
+    document<span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span><span class="token string">"visibilitychange"</span><span class="token punctuation">,</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        document<span class="token punctuation">.</span>hidden<span class="token operator">?</span><span class="token punctuation">(</span>document<span class="token punctuation">.</span>title<span class="token operator">=</span><span class="token string">"&lt;(￣︶￣)&gt;偷偷藏起来"</span><span class="token punctuation">,</span><span class="token function">clearTimeout</span><span class="token punctuation">(</span>st<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token operator">:</span><span class="token punctuation">(</span>document<span class="token punctuation">.</span>title<span class="token operator">=</span><span class="token string">"(*/ω＼*)被发现了"</span>st<span class="token operator">=</span><span class="token function">setTimeout</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>document<span class="token punctuation">.</span>title<span class="token operator">=</span>OriginTitile<span class="token punctuation">}</span><span class="token punctuation">,</span><span class="token number">3e3</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">&gt;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="首页诗词"><a href="#首页诗词" class="headerlink" title="首页诗词"></a>首页诗词</h3><p>在主题文件夹下 <code>layout/_partial/head.ejs</code> 添加</p>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token operator">&lt;</span>script src<span class="token operator">=</span><span class="token string">"https://sdk.jinrishici.com/v2/browser/jinrishici.js"</span> charset<span class="token operator">=</span><span class="token string">"utf-8"</span><span class="token operator">&gt;</span><span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">&gt;</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>并将主题文件夹下 <code>layout/_partial/bg-cover-content.ejs</code> 中 <code>&lt;%= config.description %&gt;</code> 修改为</p>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token operator">&lt;</span><span class="token operator">%</span><span class="token operator">-</span> <span class="token string">'&lt;span id="jinrishici-sentence"&gt;正在加载今日诗词....&lt;/span&gt;'</span> <span class="token operator">%</span><span class="token operator">&gt;</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>在主题文件的 <code>/source/css/matery.css</code> 文件中，搜索 <code>.bg-cover .description</code> 来修改诗词字体：</p>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token punctuation">.</span>bg<span class="token operator">-</span>cover <span class="token punctuation">.</span>description <span class="token punctuation">{</span>
+    font<span class="token operator">-</span>weight<span class="token operator">:</span> <span class="token number">600</span><span class="token punctuation">;</span>
+    font<span class="token operator">-</span>size<span class="token operator">:</span> <span class="token number">1.25</span>rem<span class="token punctuation">;</span>
+    line<span class="token operator">-</span>height<span class="token operator">:</span> <span class="token number">1.4</span>em<span class="token punctuation">;</span>
+    margin<span class="token operator">-</span>bottom<span class="token operator">:</span> <span class="token number">20</span>px<span class="token punctuation">;</span>
+    color<span class="token operator">:</span> white<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>此处将颜色改为白色并将字体加粗一倍</p>
+<h3 id="修改-Fork-Me-颜色"><a href="#修改-Fork-Me-颜色" class="headerlink" title="修改 Fork Me 颜色"></a>修改 Fork Me 颜色</h3><p>在主题文件夹下 <code>layout/_partial/github-link.ejs</code>文件中，搜索 <code>.github-corner svg</code> 来修改Fork Me 颜色：</p>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token punctuation">.</span>github<span class="token operator">-</span>corner svg <span class="token punctuation">{</span>
+    color<span class="token operator">:</span> #<span class="token number">007</span>FFF<span class="token punctuation">;</span>
+    fill<span class="token operator">:</span> #fff<span class="token punctuation">;</span>
+    height<span class="token operator">:</span> <span class="token number">64</span>px<span class="token punctuation">;</span>
+    width<span class="token operator">:</span> <span class="token number">64</span>px<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
                 
             </div>
             <hr/>
@@ -1377,7 +1529,7 @@
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">11.5k</span>&nbsp;字
+                class="white-color">12.2k</span>&nbsp;字
             
             
             
