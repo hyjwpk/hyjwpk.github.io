@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Hyjwpk</title>
+  
+  <subtitle>Hyjwpk の blog</subtitle>
+  <link href="http://hyjwpk.github.io/atom.xml" rel="self"/>
+  
+  <link href="http://hyjwpk.github.io/"/>
+  <updated>2021-10-08T05:53:56.000Z</updated>
+  <id>http://hyjwpk.github.io/</id>
+  
+  <author>
+    <name>Hyjwpk</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Hexo博客搭建教程</title>
+    <link href="http://hyjwpk.github.io/2021/08/08/jian-zhan/"/>
+    <id>http://hyjwpk.github.io/2021/08/08/jian-zhan/</id>
+    <published>2021-08-08T02:02:23.000Z</published>
+    <updated>2021-10-08T05:53:56.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;简介&quot;&gt;&lt;a href=&quot;#简介&quot; class=&quot;headerlink&quot; title=&quot;简介&quot;&gt;&lt;/a&gt;简介&lt;/h1&gt;&lt;p&gt;本篇文章介绍Windows 10系统通过Hexo生成静态站点并上传至github的过程&lt;/p&gt;
+&lt;h1 id=&quot;安装Node-js&quot;&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    
+    <category term="blog" scheme="http://hyjwpk.github.io/tags/blog/"/>
+    
+    <category term="教程" scheme="http://hyjwpk.github.io/tags/%E6%95%99%E7%A8%8B/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>数独</title>
+    <link href="http://hyjwpk.github.io/2021/08/08/shu-du/"/>
+    <id>http://hyjwpk.github.io/2021/08/08/shu-du/</id>
+    <published>2021-08-07T18:02:34.000Z</published>
+    <updated>2021-10-08T05:53:56.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;程序设计II大作业实验报告&quot;&gt;&lt;a href=&quot;#程序设计II大作业实验报告&quot; class=&quot;headerlink&quot; title=&quot;程序设计II大作业实验报告&quot;&gt;&lt;/a&gt;程序设计II大作业实验报告&lt;/h1&gt;&lt;h2 id=&quot;实验题目与要求&quot;&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    
+    <category term="大作业" scheme="http://hyjwpk.github.io/tags/%E5%A4%A7%E4%BD%9C%E4%B8%9A/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>OJ习题报告(上机2)</title>
+    <link href="http://hyjwpk.github.io/2021/08/07/oj-xi-ti/"/>
+    <id>http://hyjwpk.github.io/2021/08/07/oj-xi-ti/</id>
+    <published>2021-08-07T05:25:50.000Z</published>
+    <updated>2021-10-08T05:53:55.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;题目与要求&quot;&gt;&lt;a href=&quot;#题目与要求&quot; class=&quot;headerlink&quot; title=&quot;题目与要求&quot;&gt;&lt;/a&gt;题目与要求&lt;/h2&gt;&lt;h3 id=&quot;题目描述&quot;&gt;&lt;a href=&quot;#题目描述&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    
+    <category term="OJ" scheme="http://hyjwpk.github.io/tags/OJ/"/>
+    
+  </entry>
+  
+</feed>
