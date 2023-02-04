@@ -1,0 +1,1753 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+
+
+<head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="Huffman 编码, Hyjwpk">
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+    <title>Huffman 编码 | Hyjwpk</title>
+    <link rel="icon" type="image/png" href="/favicon.png">
+
+    <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
+    <link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
+    <link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/matery.css">
+    <link rel="stylesheet" type="text/css" href="/css/my.css">
+
+    <script src="/libs/jquery/jquery.min.js"></script>
+
+<meta name="generator" content="Hexo 5.4.0">
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+<link rel="alternate" href="/atom.xml" title="Hyjwpk" type="application/atom+xml">
+</head>
+
+<script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
+
+
+   <style>
+    body{
+       background-image: url(/medias/featureimages/4.jpg);
+       background-repeat:no-repeat;
+       background-size:cover;
+       background-attachment:fixed;
+    }
+</style>
+
+
+
+<body>
+    <header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="nav-wrapper container">
+            <div class="brand-logo">
+                <a href="/" class="waves-effect waves-light">
+                    
+                    <img src="/medias/logo.png" class="logo-img" alt="LOGO">
+                    
+                    <span class="logo-span">Hyjwpk</span>
+                </a>
+            </div>
+            
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fas fa-bars"></i></a>
+<ul class="right nav-menu">
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/" class="waves-effect waves-light">
+      
+      <i class="fas fa-home" style="zoom: 0.6;"></i>
+      
+      <span>首页</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/tags" class="waves-effect waves-light">
+      
+      <i class="fas fa-tags" style="zoom: 0.6;"></i>
+      
+      <span>标签</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/categories" class="waves-effect waves-light">
+      
+      <i class="fas fa-bookmark" style="zoom: 0.6;"></i>
+      
+      <span>分类</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/archives" class="waves-effect waves-light">
+      
+      <i class="fas fa-archive" style="zoom: 0.6;"></i>
+      
+      <span>归档</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/about" class="waves-effect waves-light">
+      
+      <i class="fas fa-user-circle" style="zoom: 0.6;"></i>
+      
+      <span>关于</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/contact" class="waves-effect waves-light">
+      
+      <i class="fas fa-comments" style="zoom: 0.6;"></i>
+      
+      <span>留言板</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/friends" class="waves-effect waves-light">
+      
+      <i class="fas fa-address-book" style="zoom: 0.6;"></i>
+      
+      <span>友情链接</span>
+    </a>
+    
+  </li>
+  
+  <li>
+    <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+      <i id="searchIcon" class="fas fa-search" title="搜索" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+</ul>
+
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="/medias/logo.png" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">Hyjwpk</div>
+        <div class="logo-desc">
+            
+            Persist, and anything will be within your reach.
+            
+        </div>
+    </div>
+
+    
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li class="m-nav-item">
+	  
+		<a href="/" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-home"></i>
+			
+			首页
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/tags" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-tags"></i>
+			
+			标签
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/categories" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-bookmark"></i>
+			
+			分类
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/archives" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-archive"></i>
+			
+			归档
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/about" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-user-circle"></i>
+			
+			关于
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/contact" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-comments"></i>
+			
+			留言板
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/friends" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-address-book"></i>
+			
+			友情链接
+		</a>
+          
+        </li>
+        
+        
+        <li><div class="divider"></div></li>
+        <li>
+            <a href="https://github.com/hyjwpk/hyjwpk.github.io" class="waves-effect waves-light" target="_blank">
+                <i class="fab fa-github-square fa-fw"></i>Fork Me
+            </a>
+        </li>
+        
+    </ul>
+</div>
+
+
+        </div>
+
+        
+            <style>
+    .nav-transparent .github-corner {
+        display: none !important;
+    }
+
+    .github-corner {
+        position: absolute;
+        z-index: 10;
+        top: 0;
+        right: 0;
+        border: 0;
+        transform: scale(1.1);
+    }
+
+    .github-corner svg {
+        color: #007FFF;
+        fill: #fff;
+        height: 64px;
+        width: 64px;
+    }
+
+    .github-corner:hover .octo-arm {
+        animation: a 0.56s ease-in-out;
+    }
+
+    .github-corner .octo-arm {
+        animation: none;
+    }
+
+    @keyframes a {
+        0%,
+        to {
+            transform: rotate(0);
+        }
+        20%,
+        60% {
+            transform: rotate(-25deg);
+        }
+        40%,
+        80% {
+            transform: rotate(10deg);
+        }
+    }
+</style>
+
+<a href="https://github.com/hyjwpk/hyjwpk.github.io" class="github-corner tooltipped hide-on-med-and-down" target="_blank"
+   data-tooltip="Fork Me" data-position="left" data-delay="50">
+    <svg viewBox="0 0 250 250" aria-hidden="true">
+        <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
+        <path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2"
+              fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path>
+        <path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z"
+              fill="currentColor" class="octo-body"></path>
+    </svg>
+</a>
+        
+    </nav>
+
+</header>
+
+    
+
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/5.jpg')">
+    <div class="container" style="right: 0px;left: 0px;">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <h1 class="description center-align post-title">Huffman 编码</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<main class="post-container content">
+
+    
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+<style>
+    #articleContent h1::before,
+    #articleContent h2::before,
+    #articleContent h3::before,
+    #articleContent h4::before,
+    #articleContent h5::before,
+    #articleContent h6::before {
+        display: block;
+        content: " ";
+        height: 100px;
+        margin-top: -100px;
+        visibility: hidden;
+    }
+
+    #articleContent :focus {
+        outline: none;
+    }
+
+    .toc-fixed {
+        position: fixed;
+        top: 64px;
+    }
+
+    .toc-widget {
+        width: 345px;
+        padding-left: 20px;
+    }
+
+    .toc-widget .toc-title {
+        padding: 35px 0 15px 17px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    .toc-widget ol {
+        padding: 0;
+        list-style: none;
+    }
+
+    #toc-content {
+        padding-bottom: 30px;
+        overflow: auto;
+    }
+
+    #toc-content ol {
+        padding-left: 10px;
+    }
+
+    #toc-content ol li {
+        padding-left: 10px;
+    }
+
+    #toc-content .toc-link:hover {
+        color: #42b983;
+        font-weight: 700;
+        text-decoration: underline;
+    }
+
+    #toc-content .toc-link::before {
+        background-color: transparent;
+        max-height: 25px;
+
+        position: absolute;
+        right: 23.5vw;
+        display: block;
+    }
+
+    #toc-content .is-active-link {
+        color: #42b983;
+    }
+
+    #floating-toc-btn {
+        position: fixed;
+        right: 15px;
+        bottom: 76px;
+        padding-top: 15px;
+        margin-bottom: 0;
+        z-index: 998;
+    }
+
+    #floating-toc-btn .btn-floating {
+        width: 48px;
+        height: 48px;
+    }
+
+    #floating-toc-btn .btn-floating i {
+        line-height: 48px;
+        font-size: 1.4rem;
+    }
+</style>
+<div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                    <div class="article-tag">
+                        
+                            <a href="/tags/qt/">
+                                <span class="chip bg-color">qt</span>
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/%E5%A4%A7%E4%BD%9C%E4%B8%9A/" class="post-category">
+                                大作业
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
+                    2022-01-24
+                </div>
+                
+
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
+                    2023-02-04
+                </div>
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
+                    3.3k
+                </div>
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
+                    15 分
+                </div>
+                
+
+                
+            </div>
+        </div>
+        <hr class="clearfix">
+
+        
+        <!-- 是否加载使用自带的 prismjs. -->
+        <link rel="stylesheet" href="/libs/prism/prism.css">
+        
+
+        
+
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <h1 id="Huffman-编码压缩-解压器实验报告"><a href="#Huffman-编码压缩-解压器实验报告" class="headerlink" title="Huffman 编码压缩/解压器实验报告"></a>Huffman 编码压缩/解压器实验报告</h1><p>完成了<code>实验基本要求</code>、<code>【实现可指定的任意基本符号单元⼤小的Huffman压缩/解压缩算法】</code>、<code>【实现可指定的任意多元Huffman压缩/解压缩算法】</code>以及<code>【额外加分项】：实现可指定的对于基本符号单元⼤小和Huffman元数这两个参数的的任意组合的Huffman编码算法，统计分析这两个参数对于压缩/解压缩情况的联合影响</code></p>
+<h2 id="实验要求"><a href="#实验要求" class="headerlink" title="实验要求"></a>实验要求</h2><h3 id="实验基本要求"><a href="#实验基本要求" class="headerlink" title="实验基本要求"></a>实验基本要求</h3><blockquote>
+<p>基于 Huffman 编码实现⼀个压缩器和解压缩器（其中 Huffman 编码以字节作为统计和编码的基本符号单元），使其可以对任意的⽂件进⾏压缩和解压缩操作。针对编译⽣成的程序，要求压缩和解压缩部分可以分别独立运⾏。</p>
+</blockquote>
+<blockquote>
+<p>每次运⾏程序时，用户可以指定只压缩/只解压缩指定路径的⽂件。实现的时候不限制与用户的交互⽅式，可供参考的⽅式包括但不限于</p>
+<ul>
+<li>根据命令行参数指定功能（压缩/解压缩）和输入/输出⽂件路径</li>
+<li>GUI 界面</li>
+<li>运行程序后由用户交互输⼊指定功能和路径</li>
+</ul>
+</blockquote>
+<h3 id="实验选做内容"><a href="#实验选做内容" class="headerlink" title="实验选做内容"></a>实验选做内容</h3><blockquote>
+<p>【实现可指定的任意基本符号单元⼤小的 <strong>Huffman</strong> 压缩**/**解压缩算法】原先我们的 Huffman 编码是对原⽂件的每⼀个字节为基本的符号单位进⾏统计和编码，试修改你的压缩/解压缩器，使其可以指定基本符号单元的⼤小，以 0.5 个字节为其⼤小变化的粒度</p>
+</blockquote>
+<blockquote>
+<p>【实现可指定的任意多元 <strong>Huffman</strong> 压缩**/**解压缩算法】 原先我们的 Huffman 编码是针对基本符号单元⽣成⼆叉树进⾏编码，试修改你的压缩/解压缩器，使其可以指定⽣成 n 叉树进⾏ Huffman 编码，要求展示修改后压缩/解压缩指定⽂件时的 n 叉树 </p>
+</blockquote>
+<h2 id="设计思路"><a href="#设计思路" class="headerlink" title="设计思路"></a>设计思路</h2><h3 id="命令行交互"><a href="#命令行交互" class="headerlink" title="命令行交互"></a>命令行交互</h3><p>第一个参数为文件路径</p>
+<p>第二个参数为功能选择（0：压缩 1：解压缩）</p>
+<p>第三个参数为基本符号单元⼤小，可省略</p>
+<p>第四个参数为Huffman树阶数，可省略</p>
+<p>示例如下</p>
+<pre class="line-numbers language-Bash" data-language="Bash"><code class="language-Bash">./HuffmanCode.exe [路径] [功能编号] (基本符号单元⼤小) (Huffman树阶数)<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>压缩后的文件将保存在与源文件相同的路径下，并加上后缀.cop</p>
+<p>压缩和解压缩时提示如下</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">基本符号单元:2 Huffman树阶数:2
+开始压缩
+编码中……
+压缩完成<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+
+<pre class="line-numbers language-Bash" data-language="Bash"><code class="language-Bash">基本符号单元:2 Huffman树阶数:2
+开始解压
+解码中……
+解压完成<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>运行时的Huffman树的链表存储如下</p>
+<p><img src="image/Huffman%E6%A0%911.jpg" alt="Huffman树1"></p>
+<p>上图为2叉Huffman树</p>
+<p><img src="image/Huffman%E6%A0%912.jpg" alt="Huffman树2"></p>
+<p>上图为填充了部分0权值节点的8叉Huffman树</p>
+<h3 id="用户交互类"><a href="#用户交互类" class="headerlink" title="用户交互类"></a>用户交互类</h3><pre class="line-numbers language-C++" data-language="C++"><code class="language-C++">class User
+{
+public:
+	User(unsigned int halfbyte = 2, unsigned int branch = 2);
+	~User();
+	void compress();
+	void decompress();
+	std::string path;
+private:
+	unsigned int halfbyte;
+	unsigned int readSupplement, writeSupplement;
+	FILE* fpOrigin, * fpCompress;
+	unsigned long long progress;
+	std::map&lt;unsigned int, unsigned int&gt; charfrequency;
+	HuffmanTree* huffmantree;
+	void readFile(FILE*&amp; fp);
+	unsigned int readsymbol(unsigned int&amp; bits);
+	void calculateFrequency();
+	void transcodeAndWriteFile();
+	void getFrequencyAndLength();
+	char* baseConversion(unsigned int ch, char destination[]);
+	std::string baseDecode(unsigned char ch);
+	void checkAndSave(char temp[], const unsigned int num);
+	void decodeAndWriteFile();
+};<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>提供压缩和解压缩两个<code>public</code>函数，并存储<code>基本符号单元大小</code>，<code>压缩文件和解压缩文件指针</code>，<code>字符频数表</code>，<code>Huffman树</code></p>
+<h3 id="HuffmanTree类"><a href="#HuffmanTree类" class="headerlink" title="HuffmanTree类"></a>HuffmanTree类</h3><pre class="line-numbers language-C++" data-language="C++"><code class="language-C++">struct HTNode
+{
+	unsigned int weight;
+	unsigned int parent, child[16] = { 0 };
+	unsigned int ch;
+	HTNode()
+	{
+		weight = 0;
+		parent = 0;
+		ch = 0;
+	}
+};
+
+class HuffmanTree
+{
+public:
+	HuffmanTree(unsigned int halfbyte, unsigned int branch);
+	~HuffmanTree();
+	void createTree(std::map&lt;unsigned int, unsigned int&gt; charfrequency);
+	void createCode();
+	unsigned int getUnitSize();
+	std::unordered_map&lt;unsigned int, std::string&gt; code;
+
+	// 叶子节点数
+	unsigned int leavesnum;
+
+	// 总字符数为n，最多需要2*n-1个节点，0号单元未用
+	HTNode* HT;
+	unsigned int branch;
+private:
+	unsigned int halfbyte;
+	void selectMinNum(const unsigned int i, std::pair&lt;unsigned int, unsigned int&gt; minNum[]);
+};<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>实现Huffman树的节点<code>HTNode</code>类与<code>HuffmanTree</code>类，<code>HTNode</code>包含节点权重，父节点，孩子和字符，<code>HuffmanTree</code>实现了创建HuffmanTree、生成Huffman编码、获取单元大小三个<code>Public</code>函数</p>
+<h2 id="关键代码讲解"><a href="#关键代码讲解" class="headerlink" title="关键代码讲解"></a>关键代码讲解</h2><h3 id="命令行交互-1"><a href="#命令行交互-1" class="headerlink" title="命令行交互"></a>命令行交互</h3><pre class="line-numbers language-C++" data-language="C++"><code class="language-C++">User* user;
+if (argc == 5)
+{
+	user = new User(atoi(argv[3]), atoi(argv[4]));
+	std::cout &lt;&lt; "基本符号单元:" &lt;&lt; argv[3] &lt;&lt; " " &lt;&lt; "Huffman树阶数:" &lt;&lt; argv[4] &lt;&lt; std::endl;
+}
+else if (argc == 3)
+{
+	std::cout &lt;&lt; "基本符号单元:" &lt;&lt; 2 &lt;&lt; " " &lt;&lt; "Huffman树阶数:" &lt;&lt; 2 &lt;&lt; std::endl;
+	user = new User();
+}
+else
+{
+	std::cout &lt;&lt; "参数错误" &lt;&lt; std::endl;
+	exit(2);
+}
+user-&gt;path = argv[1];
+if (atoi(argv[2]) == 0)
+{
+	user-&gt;compress();
+}
+else if (atoi(argv[2]) == 1)
+{
+	user-&gt;decompress();
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>判断程序接受的参数个数是否符合要求，再根据参数选取<code>基本符号单元⼤小</code>、<code>Huffman树阶数</code>对相应的文件进行压缩或解压缩</p>
+<h3 id="用户交互类-1"><a href="#用户交互类-1" class="headerlink" title="用户交互类"></a>用户交互类</h3><h4 id="压缩"><a href="#压缩" class="headerlink" title="压缩"></a>压缩</h4><pre class="line-numbers language-C++" data-language="C++"><code class="language-C++">void User::compress()
+{
+	std::cout &lt;&lt; "开始压缩" &lt;&lt; std::endl;
+	readFile(fpOrigin);
+	calculateFrequency();
+	std::cout &lt;&lt; "编码中……" &lt;&lt; std::endl;
+	huffmantree-&gt;createTree(charfrequency);
+	huffmantree-&gt;createCode();
+	transcodeAndWriteFile();
+	std::cout &lt;&lt; "压缩完成" &lt;&lt; std::endl;
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>压缩函数中首先使用二进制模式打开文件，然后计算字符频数，创建Huffman树，生成Huffman编码，最后将源文件根据Huffman编码生成压缩文件</p>
+<pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">unsigned int User::readsymbol(unsigned int&amp; bits)
+{
+	unsigned int symbol = 0, i = 0;
+	static int unuse = 0;
+	static unsigned char ch, high, low;
+	for (i = 0; i &lt; halfbyte; i++)
+	{
+		if (!unuse)
+		{
+			ch = fgetc(fpOrigin);
+			if (feof(fpOrigin)) break;
+			high = ch &gt;&gt; 4;
+			low = ch &amp; 15;
+			unuse = 2;
+		}
+		if (unuse == 2) symbol = (symbol &lt;&lt; 4) + high;
+		else symbol = (symbol &lt;&lt; 4) + low;
+		unuse--;
+	}
+	bits = i;
+	return symbol;
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>读取字符时，先将字符按半个字节拆分，再按照需要合并</p>
+<pre class="line-numbers language-C++" data-language="C++"><code class="language-C++">// 预留写最后补零个数的位置
+fwrite(&amp;writeSupplement, sizeof(unsigned int), 1, fpCompress);
+fwrite(&amp;readSupplement, sizeof(unsigned int), 1, fpCompress);
+fwrite(&amp;charfrequencysize, sizeof(unsigned int), 1, fpCompress);
+for (auto i : charfrequency)
+{
+	fwrite(&amp;i.first, sizeof(unsigned int), 1, fpCompress);
+	fwrite(&amp;i.second, sizeof(unsigned int), 1, fpCompress);
+}
+std::string temp = "";
+fseek(fpOrigin, 0l, SEEK_SET);
+do
+{
+	unsigned int bits = 0;
+	unsigned int symbol = readsymbol(bits);
+	if (feof(fpOrigin))
+	{
+		if (bits != 0)
+		{
+			for (unsigned int i = bits; i &lt; halfbyte; i++)
+			{
+				symbol = symbol &lt;&lt; 4;
+			}
+			temp += huffmantree-&gt;code[symbol];
+		}
+	}
+	else temp += huffmantree-&gt;code[symbol];
+	if (feof(fpOrigin))
+	{
+		for (unsigned int i = 0; i &lt; huffmantree-&gt;getUnitSize() - 1; i++)
+			temp += "0";
+	}
+	while (temp.length() &gt;= huffmantree-&gt;getUnitSize())
+	{
+		char byte[9] = { 0 };
+		strncpy(byte, temp.c_str(), huffmantree-&gt;getUnitSize());
+		unsigned char bytetoch = (unsigned char)strtol(byte, NULL, huffmantree-&gt;branch);
+		fputc(bytetoch, fpCompress);
+		temp.erase(0, huffmantree-&gt;getUnitSize());
+	}
+	if (feof(fpOrigin))
+	{
+		fseek(fpCompress, 0l, SEEK_SET);
+		writeSupplement = huffmantree-&gt;getUnitSize() - 1 - temp.length();
+		fputc(writeSupplement, fpCompress);
+	}
+} while (!feof(fpOrigin));<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>最后生成压缩文件时，将额外补0的个数写在文件开头，紧接着写入词频表，最后依次读入源文件的字符转换后存入压缩文件</p>
+<h4 id="解压"><a href="#解压" class="headerlink" title="解压"></a>解压</h4><pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">void User::decompress()
+{
+	std::cout &lt;&lt; "开始解压" &lt;&lt; std::endl;
+	readFile(fpCompress);
+	getFrequencyAndLength();
+	std::cout &lt;&lt; "解码中……" &lt;&lt; std::endl;
+	huffmantree-&gt;createTree(charfrequency);
+	decodeAndWriteFile();
+	std::cout &lt;&lt; "解压完成" &lt;&lt; std::endl;
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>解压缩时先读取压缩文件，获取词频，创建Huffman树后读取压缩文件译码生成源文件</p>
+<pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">std::string User::baseDecode(unsigned char ch)
+{
+	std::string result = "";
+	for (unsigned int i = 0; i &lt; huffmantree-&gt;getUnitSize(); i++)
+	{
+		result += ch % huffmantree-&gt;branch + '0';
+		ch = ch / huffmantree-&gt;branch;
+	}
+	return result;
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>该函数实现将k叉Huffman树得到的k进制串转换为字符的功能</p>
+<pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">while (true)
+{
+	if (num == 0)
+	{
+		ch = fgetc(fpCompress);
+		num = huffmantree-&gt;getUnitSize();
+		result = baseDecode(ch);
+		if (--progress == 0) break;
+	}
+	if (huffmantree-&gt;HT[p].child[0] != 0)
+	{
+		p = huffmantree-&gt;HT[p].child[result.c_str()[--num] - '0'];
+	}
+	else
+	{
+		char ch[10];
+		strcat(temp, baseConversion(huffmantree-&gt;HT[p].ch, ch));
+		checkAndSave(temp, 8u);
+		p = root;
+	}
+}
+while (num &gt;= (int)writeSupplement)
+{
+	if (huffmantree-&gt;HT[p].child[0] != 0)
+	{
+		p = huffmantree-&gt;HT[p].child[result.c_str()[--num] - '0'];
+	}
+	else
+	{
+		char ch[10];
+		strcat(temp, baseConversion(huffmantree-&gt;HT[p].ch, ch));
+		checkAndSave(temp, 8u);
+		p = root;
+	}
+}
+checkAndSave(temp, readSupplement);<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>根据构建好的Huffman树得到原始字符，去除压缩时填充部分后得到源文件</p>
+<h3 id="HuffmanTree类-1"><a href="#HuffmanTree类-1" class="headerlink" title="HuffmanTree类"></a>HuffmanTree类</h3><pre class="line-numbers language-C++" data-language="C++"><code class="language-C++">void HuffmanTree::createTree(std::map&lt;unsigned int, unsigned int&gt; charfrequency)
+{
+	leavesnum = charfrequency.size();
+	leavesnum += branch - 1 - (leavesnum - 1) % (branch - 1);
+	HT = new HTNode[leavesnum + (leavesnum - 1) / (branch - 1) + 1]();
+	leavesnum = 0;
+	for (auto i : charfrequency)
+	{
+		HT[++leavesnum].ch = i.first;
+		HT[leavesnum].weight = i.second;
+	}
+	if (leavesnum == 0 || leavesnum == 1)
+	{
+		std::cout &lt;&lt; "无法构造Huffman树" &lt;&lt; std::endl;
+		exit(1);
+	}
+	leavesnum += branch - 1 - (leavesnum - 1) % (branch - 1);
+	for (unsigned int i = leavesnum + 1; i &lt;= leavesnum + (leavesnum - 1) / (branch - 1); i++)
+	{
+		std::pair&lt;unsigned int, unsigned int&gt;  minNum[16];
+		selectMinNum(i - 1, minNum);
+		for (unsigned int j = 0; j &lt; branch; j++)
+		{
+			HT[minNum[j].first].parent = i;
+			HT[i].child[j] = minNum[j].first;
+			HT[i].weight += minNum[j].second;
+		}
+	}
+}
+
+void HuffmanTree::createCode()
+{
+	for (unsigned int i = 1; i &lt;= leavesnum; i++)
+	{
+		if (HT[i].weight == 0) continue;
+		code[HT[i].ch] = "";
+		for (unsigned int j = i; HT[j].parent; j = HT[j].parent)
+		{
+			unsigned int parent = HT[j].parent;
+			for (unsigned int k = 0; k &lt; branch; k++)
+			{
+				if (HT[parent].child[k] == j)
+				{
+					if (k &lt; 10)
+						code[HT[i].ch] += '0' + k;
+					else code[HT[i].ch] += 'a' + k - 10;
+					break;
+				}
+			}
+		}
+		std::reverse(code[HT[i].ch].begin(), code[HT[i].ch].end());
+	}
+}
+
+bool compare(std::pair&lt;unsigned int, unsigned int&gt; a, std::pair&lt;unsigned int, unsigned int&gt; b)
+{
+	return a.second &lt; b.second;
+}
+
+void HuffmanTree::selectMinNum(const unsigned int i, std::pair&lt;unsigned int, unsigned int&gt; minNum[])
+{
+	unsigned int j = 0;
+	for (unsigned int i = 0; i &lt; branch; i++)
+	{
+		while (true)
+		{
+			j++;
+			if (HT[j].parent == 0)
+			{
+				minNum[i].first = j;
+				minNum[i].second = HT[j].weight;
+				break;
+			}
+		}
+	}
+	std::sort(minNum, minNum + branch, compare);
+	for (j = j + 1; j &lt;= i; j++)
+	{
+		if (HT[j].parent == 0)
+		{
+			if (HT[j].weight &lt; minNum[branch - 1].second)
+			{
+				minNum[branch - 1].first = j;
+				minNum[branch - 1].second = HT[j].weight;
+				std::sort(minNum, minNum + branch, compare);
+			}
+		}
+	}
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>构造Huffman树和生成Huffman编码部分参考课本<code>6.6.2</code>节内容，此处拓展为k叉树的情况对每个叶子节点生成k进制串</p>
+<pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">unsigned int HuffmanTree::getUnitSize()
+{
+	switch (branch)
+	{
+	case 2:
+		return 8;
+	case 3:
+		return 5;
+	case 4:
+		return 4;
+	case 5:case 6:
+		return 3;
+	default:
+		return 2;
+	}
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>该函数返回一个字节所存储的k进制数的个数</p>
+<h2 id="调试分析"><a href="#调试分析" class="headerlink" title="调试分析"></a>调试分析</h2><h3 id="时间复杂度"><a href="#时间复杂度" class="headerlink" title="时间复杂度"></a>时间复杂度</h3><h4 id="Huffman树"><a href="#Huffman树" class="headerlink" title="Huffman树"></a>Huffman树</h4><p>记叶子节点个数为n，在构造k叉Huffman树的过程中，取最小节点的次数为<code>O(n/k)</code>，每次取最小节点的复杂度为<code>O(n)</code>，将所有节点合并的时间复杂度为<code>O(n)</code>，则构造Huffman树的时间复杂度为<code>O(n^2/k+n)</code>即<code>O(n^2/k)</code></p>
+<p>在求Huffman编码的过程中，叶子节点的平均深度为<code>O(logn)</code>，对n个叶子节点分别求编码的总时间复杂度为<code>O(nlogn)</code></p>
+<h4 id="文件读写"><a href="#文件读写" class="headerlink" title="文件读写"></a>文件读写</h4><p>文件读写的时间复杂度为<code>O(m)</code>，m为文件中含有的字节数</p>
+<h4 id="压缩-解压缩的总复杂度"><a href="#压缩-解压缩的总复杂度" class="headerlink" title="压缩/解压缩的总复杂度"></a>压缩/解压缩的总复杂度</h4><p>总时间复杂度为<code>O(n^2/k+m)</code></p>
+<h3 id="空间复杂度"><a href="#空间复杂度" class="headerlink" title="空间复杂度"></a>空间复杂度</h3><p>存储Huffman树以及Huffman编码的空间复杂度为<code>O(n)</code></p>
+<h3 id="遇到的bug"><a href="#遇到的bug" class="headerlink" title="遇到的bug"></a>遇到的bug</h3><h4 id="bug1"><a href="#bug1" class="headerlink" title="bug1"></a>bug1</h4><ul>
+<li>bug内容：使用较大的基本符号单元时程序发生溢出</li>
+<li>bug原因：对每个字符都分配存储空间，存储词频表所用空间过大</li>
+<li>解决方案：按需分配词频表的存储空间，对词频为0的字符不分配空间</li>
+</ul>
+<h4 id="bug2"><a href="#bug2" class="headerlink" title="bug2"></a>bug2</h4><ul>
+<li>bug内容：使用k叉Huffman树解压缩时，无法还原出原先的k进制字符串</li>
+<li>bug原因：k进制串的高位部分0被忽略</li>
+<li>解决方案：确定每个进制在一个字符中所存的位数，以便解压缩时得出高位是否含0</li>
+</ul>
+<h2 id="代码测试"><a href="#代码测试" class="headerlink" title="代码测试"></a>代码测试</h2><table>
+<thead>
+<tr>
+<th>阶数/单元</th>
+<th>1</th>
+<th>2</th>
+<th>3</th>
+<th>4</th>
+<th>5</th>
+<th>6</th>
+<th>7</th>
+<th>8</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>2</td>
+<td>0.93</td>
+<td>0.77</td>
+<td>0.81</td>
+<td>0.67</td>
+<td>0.79</td>
+<td>0.86</td>
+<td>1.22</td>
+<td>1.09</td>
+</tr>
+<tr>
+<td>3</td>
+<td>0.95</td>
+<td>0.78</td>
+<td>0.82</td>
+<td>0.68</td>
+<td>0.80</td>
+<td>0.87</td>
+<td>1.23</td>
+<td>1.10</td>
+</tr>
+<tr>
+<td>4</td>
+<td>0.97</td>
+<td>0.78</td>
+<td>0.81</td>
+<td>0.68</td>
+<td>0.79</td>
+<td>0.87</td>
+<td>1.23</td>
+<td>1.10</td>
+</tr>
+<tr>
+<td>5</td>
+<td>1.11</td>
+<td>0.90</td>
+<td>0.94</td>
+<td>0.78</td>
+<td>0.90</td>
+<td>0.95</td>
+<td>1.31</td>
+<td>1.17</td>
+</tr>
+<tr>
+<td>6</td>
+<td>0.98</td>
+<td>0.82</td>
+<td>0.85</td>
+<td>0.71</td>
+<td>0.82</td>
+<td>0.89</td>
+<td>1.25</td>
+<td>1.11</td>
+</tr>
+<tr>
+<td>7</td>
+<td>1.40</td>
+<td>1.12</td>
+<td>1.17</td>
+<td>0.97</td>
+<td>1.09</td>
+<td>1.11</td>
+<td>1.46</td>
+<td>1.30</td>
+</tr>
+<tr>
+<td>8</td>
+<td>1.34</td>
+<td>1.06</td>
+<td>1.10</td>
+<td>0.91</td>
+<td>1.03</td>
+<td>1.06</td>
+<td>1.41</td>
+<td>1.26</td>
+</tr>
+<tr>
+<td>9</td>
+<td>1.25</td>
+<td>1.01</td>
+<td>1.04</td>
+<td>0.87</td>
+<td>0.98</td>
+<td>1.02</td>
+<td>1.37</td>
+<td>1.22</td>
+</tr>
+<tr>
+<td>10</td>
+<td>1.21</td>
+<td>0.97</td>
+<td>1.00</td>
+<td>0.83</td>
+<td>0.94</td>
+<td>0.99</td>
+<td>1.35</td>
+<td>1.20</td>
+</tr>
+<tr>
+<td>11</td>
+<td>1.17</td>
+<td>0.94</td>
+<td>0.96</td>
+<td>0.80</td>
+<td>0.91</td>
+<td>0.97</td>
+<td>1.32</td>
+<td>1.18</td>
+</tr>
+<tr>
+<td>12</td>
+<td>1.13</td>
+<td>0.92</td>
+<td>0.93</td>
+<td>0.77</td>
+<td>0.89</td>
+<td>0.94</td>
+<td>1.30</td>
+<td>1.16</td>
+</tr>
+<tr>
+<td>13</td>
+<td>1.10</td>
+<td>0.89</td>
+<td>0.90</td>
+<td>0.75</td>
+<td>0.86</td>
+<td>0.92</td>
+<td>1.28</td>
+<td>1.14</td>
+</tr>
+<tr>
+<td>14</td>
+<td>1.07</td>
+<td>0.87</td>
+<td>0.88</td>
+<td>0.73</td>
+<td>0.84</td>
+<td>0.91</td>
+<td>1.26</td>
+<td>1.13</td>
+</tr>
+<tr>
+<td>15</td>
+<td>1.04</td>
+<td>0.85</td>
+<td>0.86</td>
+<td>0.72</td>
+<td>0.82</td>
+<td>0.89</td>
+<td>1.25</td>
+<td>1.12</td>
+</tr>
+<tr>
+<td>16</td>
+<td>1.02</td>
+<td>0.84</td>
+<td>0.84</td>
+<td>0.70</td>
+<td>0.81</td>
+<td>0.88</td>
+<td>1.24</td>
+<td>1.11</td>
+</tr>
+</tbody></table>
+<p>使用文本文件进行压缩测试，在不同的基本符号单元⼤小与Huffman树阶数下测得的压缩率如上，单元以半个字节计，1-8即为0.5-4个字节</p>
+<p><img src="image/%E5%9B%BE%E8%A1%A81.jpg" alt="图表1"></p>
+<p>如图所示，在基本符号单元相同时，2叉~4叉Huffman树的压缩率较小</p>
+<p><img src="image/%E5%9B%BE%E8%A1%A82.jpg" alt="图表2"></p>
+<p>在Huffman树阶数相同时，基本符号单元为2字节时压缩率最小，可能的原因是测试的文本文件采用ANSI编码，每个字符用两个字节存储，因此在基本符号单元为2字节时呈现出有规律的词频分布，压缩效率较高</p>
+<p><img src="image/%E5%9B%BE%E8%A1%A83.jpg" alt="图表3"></p>
+<p>使用MATLAB以压缩率为因变量，基本符号单元大小与Huffman树阶数为自变量作图并求得压缩率最低点如上，在基本符号单元⼤小为<code>2字节</code>，Huffman树阶数为<code>2</code>时压缩率最小为<code>67.4%</code></p>
+<h2 id="实验总结"><a href="#实验总结" class="headerlink" title="实验总结"></a>实验总结</h2><p>通过这次实验，我熟练掌握了使用Huffman树进行压缩和解压缩的方法，熟悉了树的基本存储结构，学习了使用命令行获取参数的方法，并学习了测试与分析测试结果的方法。通过编写这样一个小项目，提高了代码组织能力和问题的发现与解决能力，同时对于书上的算法的具体代码实现有了更深的理解。</p>
+<h2 id="附录"><a href="#附录" class="headerlink" title="附录"></a>附录</h2><ul>
+<li><p>User.h</p>
+<p>用户交互类头文件</p>
+</li>
+<li><p>User.cpp</p>
+<p>用户交互类实现</p>
+</li>
+<li><p>HuffmanTree.h</p>
+<p>Huffman树类头文件</p>
+</li>
+<li><p>HuffmanTree.cpp</p>
+<p>Huffman树类实现</p>
+</li>
+<li><p>test.cpp</p>
+<p>主函数</p>
+</li>
+</ul>
+
+                
+            </div>
+            <hr/>
+
+            
+
+    <div class="reprint" id="reprint-statement">
+        
+            <div class="reprint__author">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-user">
+                        文章作者:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="/about" rel="external nofollow noreferrer">Hyjwpk</a>
+                </span>
+            </div>
+            <div class="reprint__type">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-link">
+                        文章链接:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="http://hyjwpk.github.io/2022/01/24/huffman-bian-ma/">http://hyjwpk.github.io/2022/01/24/huffman-bian-ma/</a>
+                </span>
+            </div>
+            <div class="reprint__notice">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-copyright">
+                        版权声明:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    本博客所有文章除特別声明外，均采用
+                    <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
+                    许可协议。转载请注明来源
+                    <a href="/about" target="_blank">Hyjwpk</a>
+                    !
+                </span>
+            </div>
+        
+    </div>
+
+    <script async defer>
+      document.addEventListener("copy", function (e) {
+        let toastHTML = '<span>复制成功，请遵循本文的转载规则</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">查看</a>';
+        M.toast({html: toastHTML})
+      });
+
+      function navToReprintStatement() {
+        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
+      }
+    </script>
+
+
+
+            <div class="tag_share" style="display: block;">
+                <div class="post-meta__tag-list" style="display: inline-block;">
+                    
+                        <div class="article-tag">
+                            
+                                <a href="/tags/qt/">
+                                    <span class="chip bg-color">qt</span>
+                                </a>
+                            
+                        </div>
+                    
+                </div>
+                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
+                    <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+<div id="article-share">
+
+    
+    <div class="social-share" data-sites="twitter,facebook,google,qq,qzone,wechat,weibo,douban,linkedin" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+    <script src="/libs/share/js/social-share.min.js"></script>
+    
+
+    
+
+</div>
+
+                </div>
+            </div>
+            
+        </div>
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+            <div class="card">
+                <a href="/2022/08/01/python-game/">
+                    <div class="card-image">
+                        
+                        <img src="/medias/featureimages/3.jpg" class="responsive-img" alt="python-game">
+                        
+                        <span class="card-title">python-game</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2022-08-01
+                        </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E5%A4%A7%E4%BD%9C%E4%B8%9A/" class="post-category">
+                                    大作业
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/python/">
+                        <span class="chip bg-color">python</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2022/01/23/yin-xing-ye-wu-mo-ni/">
+                    <div class="card-image">
+                        
+                        <img src="/medias/featureimages/4.jpg" class="responsive-img" alt="银行业务模拟">
+                        
+                        <span class="card-title">银行业务模拟</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-01-23
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E5%A4%A7%E4%BD%9C%E4%B8%9A/" class="post-category">
+                                    大作业
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/qt/">
+                        <span class="chip bg-color">qt</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+
+</div>
+
+
+
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
+
+<!-- 代码语言 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
+
+
+<!-- 代码块复制 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
+
+
+<!-- 代码块收缩 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
+
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget card" style="background-color: white;">
+            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;目录</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fas fa-list-ul"></i>
+    </a>
+</div>
+
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            collapseDepth: Number('0'),
+            headingSelector: 'h2, h3, h4'
+        });
+
+        // modify the toc link href to support Chinese.
+        let i = 0;
+        let tocHeading = 'toc-heading-';
+        $('#toc-content a').each(function () {
+            $(this).attr('href', '#' + tocHeading + (++i));
+        });
+
+        // modify the heading title id to support Chinese.
+        i = 0;
+        $('#articleContent').children('h2, h3, h4').each(function () {
+            $(this).attr('id', tocHeading + (++i));
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).hide();
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).show();
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
+
+    
+
+</main>
+
+
+
+
+    <footer class="page-footer bg-color">
+    
+        <link rel="stylesheet" href="/libs/aplayer/APlayer.min.css">
+<style>
+    .aplayer .aplayer-lrc p {
+        
+        display: none;
+        
+        font-size: 12px;
+        font-weight: 700;
+        line-height: 16px !important;
+    }
+
+    .aplayer .aplayer-lrc p.aplayer-lrc-current {
+        
+        display: none;
+        
+        font-size: 15px;
+        color: #42b983;
+    }
+
+    
+    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body {
+        left: -66px !important;
+    }
+
+    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body:hover {
+        left: 0px !important;
+    }
+
+    
+</style>
+<div class="">
+    
+    <div class="row">
+        <meting-js class="col l8 offset-l2 m10 offset-m1 s12"
+                   server="netease"
+                   type="playlist"
+                   id="2722795475"
+                   fixed='true'
+                   autoplay='false'
+                   theme='#42b983'
+                   loop='all'
+                   order='random'
+                   preload='auto'
+                   volume='0.7'
+                   list-folded='true'
+        >
+        </meting-js>
+    </div>
+</div>
+
+<script src="/libs/aplayer/APlayer.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
+
+    
+    <div class="container row center-align" style="margin-bottom: 0px !important;">
+        <div class="col s12 m8 l8 copy-right">
+            Copyright&nbsp;&copy;
+            
+                <span id="year">2019-2023</span>
+            
+            <span id="year">2023</span>
+            <a href="/about" target="_blank">Hyjwpk</a>
+            |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
+            |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
+            <br>
+            
+            &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
+                class="white-color">41.8k</span>&nbsp;字
+            
+            
+            
+            
+            
+            
+            <span id="busuanzi_container_site_pv">
+                |&nbsp;<i class="far fa-eye"></i>&nbsp;总访问量:&nbsp;<span id="busuanzi_value_site_pv"
+                    class="white-color"></span>&nbsp;次
+            </span>
+            
+            
+            <span id="busuanzi_container_site_uv">
+                |&nbsp;<i class="fas fa-users"></i>&nbsp;总访问人数:&nbsp;<span id="busuanzi_value_site_uv"
+                    class="white-color"></span>&nbsp;人
+            </span>
+            
+            <br>
+            
+            <br>
+            
+        </div>
+        <div class="col s12 m4 l4 social-link social-statis">
+    <a href="https://github.com/hyjwpk" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+        <i class="fab fa-github"></i>
+    </a>
+
+
+
+    <a href="mailto:2359105286@qq.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+        <i class="fas fa-envelope-open"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=2359105286" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 2359105286" data-position="top" data-delay="50">
+        <i class="fab fa-qq"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
+        <i class="fas fa-rss"></i>
+    </a>
+
+</div>
+    </div>
+</footer>
+
+<div class="progress-bar"></div>
+
+
+    <!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;搜索</span>
+            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字"
+                   class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script type="text/javascript">
+$(function () {
+    var searchFunc = function (path, search_id, content_id) {
+        'use strict';
+        $.ajax({
+            url: path,
+            dataType: "xml",
+            success: function (xmlResponse) {
+                // get the contents from search data
+                var datas = $("entry", xmlResponse).map(function () {
+                    return {
+                        title: $("title", this).text(),
+                        content: $("content", this).text(),
+                        url: $("url", this).text()
+                    };
+                }).get();
+                var $input = document.getElementById(search_id);
+                var $resultContent = document.getElementById(content_id);
+                $input.addEventListener('input', function () {
+                    var str = '<ul class=\"search-result-list\">';
+                    var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+                    $resultContent.innerHTML = "";
+                    if (this.value.trim().length <= 0) {
+                        return;
+                    }
+                    // perform local searching
+                    datas.forEach(function (data) {
+                        var isMatch = true;
+                        var data_title = data.title.trim().toLowerCase();
+                        var data_content = data.content.trim().replace(/<[^>]+>/g, "").toLowerCase();
+                        var data_url = data.url;
+                        data_url = data_url.indexOf('/') === 0 ? data.url : '/' + data_url;
+                        var index_title = -1;
+                        var index_content = -1;
+                        var first_occur = -1;
+                        // only match artiles with not empty titles and contents
+                        if (data_title !== '' && data_content !== '') {
+                            keywords.forEach(function (keyword, i) {
+                                index_title = data_title.indexOf(keyword);
+                                index_content = data_content.indexOf(keyword);
+                                if (index_title < 0 && index_content < 0) {
+                                    isMatch = false;
+                                } else {
+                                    if (index_content < 0) {
+                                        index_content = 0;
+                                    }
+                                    if (i === 0) {
+                                        first_occur = index_content;
+                                    }
+                                }
+                            });
+                        }
+                        // show search results
+                        if (isMatch) {
+                            str += "<li><a href='" + data_url + "' class='search-result-title'>" + data_title + "</a>";
+                            var content = data.content.trim().replace(/<[^>]+>/g, "");
+                            if (first_occur >= 0) {
+                                // cut out 100 characters
+                                var start = first_occur - 20;
+                                var end = first_occur + 80;
+                                if (start < 0) {
+                                    start = 0;
+                                }
+                                if (start === 0) {
+                                    end = 100;
+                                }
+                                if (end > content.length) {
+                                    end = content.length;
+                                }
+                                var match_content = content.substr(start, end);
+                                // highlight all keywords
+                                keywords.forEach(function (keyword) {
+                                    var regS = new RegExp(keyword, "gi");
+                                    match_content = match_content.replace(regS, "<em class=\"search-keyword\">" + keyword + "</em>");
+                                });
+
+                                str += "<p class=\"search-result\">" + match_content + "...</p>"
+                            }
+                            str += "</li>";
+                        }
+                    });
+                    str += "</ul>";
+                    $resultContent.innerHTML = str;
+                });
+            }
+        });
+    };
+
+    searchFunc('/search.xml', 'searchInput', 'searchResult');
+});
+</script>
+
+    <!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+</div>
+
+
+    <script src="/libs/materialize/materialize.min.js"></script>
+    <script src="/libs/masonry/masonry.pkgd.min.js"></script>
+    <script src="/libs/aos/aos.js"></script>
+    <script src="/libs/scrollprogress/scrollProgress.min.js"></script>
+    <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
+    <script src="/js/matery.js"></script>
+
+    <!-- Baidu Analytics -->
+
+    <!-- Baidu Push -->
+
+<script>
+    (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+
+    
+    <script src="/libs/others/clicklove.js" async="async"></script>
+    
+    
+    <script async src="/libs/others/busuanzi.pure.mini.js"></script>
+    
+
+    
+
+    
+
+	
+    
+
+    
+
+    
+
+    
+    <script src="/libs/instantpage/instantpage.js" type="module"></script>
+    
+
+    <script src="https://cdn.jsdelivr.net/gh/hyjwpk/hyjwpk.github.io@main/js/prism.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/gh/hyjwpk/hyjwpk.github.io@main/js/snow.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/gh/stevenjoezhang/live2d-widget@latest/autoload.js"></script>
+
+    <script type="text/javascript">
+        var OriginTitile=document.title,st;
+        document.addEventListener("visibilitychange",function(){
+            document.hidden?(document.title="<(￣︶￣)>偷偷藏起来",clearTimeout(st)):(document.title="(*/ω＼*)被发现了",st=setTimeout(function(){document.title=OriginTitile},3e3))
+        })
+    </script>
+
+</body>
+
+</html>

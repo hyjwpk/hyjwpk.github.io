@@ -6,7 +6,7 @@
   <link href="http://hyjwpk.github.io/atom.xml" rel="self"/>
   
   <link href="http://hyjwpk.github.io/"/>
-  <updated>2023-02-04T05:11:45.656Z</updated>
+  <updated>2023-02-04T06:05:21.303Z</updated>
   <id>http://hyjwpk.github.io/</id>
   
   <author>
@@ -17,11 +17,162 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>图像处理上机报告</title>
+    <link href="http://hyjwpk.github.io/2022/08/02/tu-xiang-chu-li-shang-ji-bao-gao/"/>
+    <id>http://hyjwpk.github.io/2022/08/02/tu-xiang-chu-li-shang-ji-bao-gao/</id>
+    <published>2022-08-02T04:00:00.000Z</published>
+    <updated>2023-02-04T06:05:21.303Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;图像处理上机报告&quot;&gt;&lt;a href=&quot;#图像处理上机报告&quot; class=&quot;headerlink&quot; title=&quot;图像处理上机报告&quot;&gt;&lt;/a&gt;图像处理上机报告&lt;/h1&gt;&lt;h2 id=&quot;实验一-图像几何变换&quot;&gt;&lt;a href=&quot;#实验一-图像几何变换&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="实验" scheme="http://hyjwpk.github.io/categories/%E5%AE%9E%E9%AA%8C/"/>
+    
+    
+    <category term="matlab" scheme="http://hyjwpk.github.io/tags/matlab/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>python-game</title>
+    <link href="http://hyjwpk.github.io/2022/08/01/python-game/"/>
+    <id>http://hyjwpk.github.io/2022/08/01/python-game/</id>
+    <published>2022-08-01T04:00:00.000Z</published>
+    <updated>2023-02-04T05:53:36.532Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;python-game&quot;&gt;&lt;a href=&quot;#python-game&quot; class=&quot;headerlink&quot; title=&quot;python-game&quot;&gt;&lt;/a&gt;python-game&lt;/h1&gt;&lt;p&gt;[Toc]&lt;/p&gt;
+&lt;h2 id=&quot;小组成员&quot;&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="大作业" scheme="http://hyjwpk.github.io/categories/%E5%A4%A7%E4%BD%9C%E4%B8%9A/"/>
+    
+    
+    <category term="python" scheme="http://hyjwpk.github.io/tags/python/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Huffman 编码</title>
+    <link href="http://hyjwpk.github.io/2022/01/24/huffman-bian-ma/"/>
+    <id>http://hyjwpk.github.io/2022/01/24/huffman-bian-ma/</id>
+    <published>2022-01-24T04:00:00.000Z</published>
+    <updated>2023-02-04T06:03:03.879Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;Huffman-编码压缩-解压器实验报告&quot;&gt;&lt;a href=&quot;#Huffman-编码压缩-解压器实验报告&quot; class=&quot;headerlink&quot; title=&quot;Huffman 编码压缩/解压器实验报告&quot;&gt;&lt;/a&gt;Huffman</summary>
+        
+      
+    
+    
+    
+    <category term="大作业" scheme="http://hyjwpk.github.io/categories/%E5%A4%A7%E4%BD%9C%E4%B8%9A/"/>
+    
+    
+    <category term="qt" scheme="http://hyjwpk.github.io/tags/qt/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>银行业务模拟</title>
+    <link href="http://hyjwpk.github.io/2022/01/23/yin-xing-ye-wu-mo-ni/"/>
+    <id>http://hyjwpk.github.io/2022/01/23/yin-xing-ye-wu-mo-ni/</id>
+    <published>2022-01-23T04:00:00.000Z</published>
+    <updated>2023-02-04T05:57:24.988Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;离散事件模拟实验报告（银行业务模拟）&quot;&gt;&lt;a href=&quot;#离散事件模拟实验报告（银行业务模拟）&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="大作业" scheme="http://hyjwpk.github.io/categories/%E5%A4%A7%E4%BD%9C%E4%B8%9A/"/>
+    
+    
+    <category term="qt" scheme="http://hyjwpk.github.io/tags/qt/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>数独</title>
+    <link href="http://hyjwpk.github.io/2021/08/08/shu-du/"/>
+    <id>http://hyjwpk.github.io/2021/08/08/shu-du/</id>
+    <published>2021-08-07T18:02:34.000Z</published>
+    <updated>2023-02-04T05:50:15.912Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;程序设计II大作业实验报告&quot;&gt;&lt;a href=&quot;#程序设计II大作业实验报告&quot; class=&quot;headerlink&quot; title=&quot;程序设计II大作业实验报告&quot;&gt;&lt;/a&gt;程序设计II大作业实验报告&lt;/h1&gt;&lt;h2 id=&quot;实验题目与要求&quot;&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="大作业" scheme="http://hyjwpk.github.io/categories/%E5%A4%A7%E4%BD%9C%E4%B8%9A/"/>
+    
+    
+    <category term="unity" scheme="http://hyjwpk.github.io/tags/unity/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>砖块大战</title>
+    <link href="http://hyjwpk.github.io/2021/02/01/zhuan-kuai-da-zhan/"/>
+    <id>http://hyjwpk.github.io/2021/02/01/zhuan-kuai-da-zhan/</id>
+    <published>2021-02-01T04:00:00.000Z</published>
+    <updated>2023-02-04T05:50:09.241Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;计算机程序设计课程实践项目报告C（C-）语言版砖块大战&quot;&gt;&lt;a href=&quot;#计算机程序设计课程实践项目报告C（C-）语言版砖块大战&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="大作业" scheme="http://hyjwpk.github.io/categories/%E5%A4%A7%E4%BD%9C%E4%B8%9A/"/>
+    
+    
+    <category term="easyx" scheme="http://hyjwpk.github.io/tags/easyx/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Hexo博客搭建教程</title>
-    <link href="http://hyjwpk.github.io/2021/08/08/hexo-bo-ke-da-jian-jiao-cheng/"/>
-    <id>http://hyjwpk.github.io/2021/08/08/hexo-bo-ke-da-jian-jiao-cheng/</id>
-    <published>2021-08-08T02:02:23.000Z</published>
-    <updated>2023-02-04T05:11:45.656Z</updated>
+    <link href="http://hyjwpk.github.io/2021/01/29/hexo-bo-ke-da-jian-jiao-cheng/"/>
+    <id>http://hyjwpk.github.io/2021/01/29/hexo-bo-ke-da-jian-jiao-cheng/</id>
+    <published>2021-01-29T02:02:23.000Z</published>
+    <updated>2023-02-04T06:00:14.919Z</updated>
     
     
       
@@ -40,82 +191,7 @@
     
     <category term="blog" scheme="http://hyjwpk.github.io/tags/blog/"/>
     
-    <category term="教程" scheme="http://hyjwpk.github.io/tags/%E6%95%99%E7%A8%8B/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>数独(程序设计II大作业)</title>
-    <link href="http://hyjwpk.github.io/2021/08/08/shu-du-cheng-xu-she-ji-ii-da-zuo-ye/"/>
-    <id>http://hyjwpk.github.io/2021/08/08/shu-du-cheng-xu-she-ji-ii-da-zuo-ye/</id>
-    <published>2021-08-07T18:02:34.000Z</published>
-    <updated>2023-02-04T05:12:15.290Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;程序设计II大作业实验报告&quot;&gt;&lt;a href=&quot;#程序设计II大作业实验报告&quot; class=&quot;headerlink&quot; title=&quot;程序设计II大作业实验报告&quot;&gt;&lt;/a&gt;程序设计II大作业实验报告&lt;/h1&gt;&lt;h2 id=&quot;实验题目与要求&quot;&gt;&lt;a</summary>
-        
-      
-    
-    
-    
-    <category term="项目" scheme="http://hyjwpk.github.io/categories/%E9%A1%B9%E7%9B%AE/"/>
-    
-    
-    <category term="大作业" scheme="http://hyjwpk.github.io/tags/%E5%A4%A7%E4%BD%9C%E4%B8%9A/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>OJ习题报告(上机2)</title>
-    <link href="http://hyjwpk.github.io/2021/08/07/oj-xi-ti-bao-gao-shang-ji-2/"/>
-    <id>http://hyjwpk.github.io/2021/08/07/oj-xi-ti-bao-gao-shang-ji-2/</id>
-    <published>2021-08-07T05:25:50.000Z</published>
-    <updated>2023-02-04T05:12:32.381Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h2 id=&quot;题目与要求&quot;&gt;&lt;a href=&quot;#题目与要求&quot; class=&quot;headerlink&quot; title=&quot;题目与要求&quot;&gt;&lt;/a&gt;题目与要求&lt;/h2&gt;&lt;h3 id=&quot;题目描述&quot;&gt;&lt;a href=&quot;#题目描述&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="实验报告" scheme="http://hyjwpk.github.io/categories/%E5%AE%9E%E9%AA%8C%E6%8A%A5%E5%91%8A/"/>
-    
-    
-    <category term="OJ" scheme="http://hyjwpk.github.io/tags/OJ/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>砖块大战</title>
-    <link href="http://hyjwpk.github.io/2021/02/01/zhuan-kuai-da-zhan/"/>
-    <id>http://hyjwpk.github.io/2021/02/01/zhuan-kuai-da-zhan/</id>
-    <published>2021-02-01T04:00:00.000Z</published>
-    <updated>2023-02-04T05:12:46.591Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;计算机程序设计课程实践项目报告C（C-）语言版砖块大战&quot;&gt;&lt;a href=&quot;#计算机程序设计课程实践项目报告C（C-）语言版砖块大战&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="项目" scheme="http://hyjwpk.github.io/categories/%E9%A1%B9%E7%9B%AE/"/>
-    
-    
-    <category term="大作业" scheme="http://hyjwpk.github.io/tags/%E5%A4%A7%E4%BD%9C%E4%B8%9A/"/>
+    <category term="hexo" scheme="http://hyjwpk.github.io/tags/hexo/"/>
     
   </entry>
   

@@ -1,0 +1,1863 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+
+
+<head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="银行业务模拟, Hyjwpk">
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+    <title>银行业务模拟 | Hyjwpk</title>
+    <link rel="icon" type="image/png" href="/favicon.png">
+
+    <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
+    <link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
+    <link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/matery.css">
+    <link rel="stylesheet" type="text/css" href="/css/my.css">
+
+    <script src="/libs/jquery/jquery.min.js"></script>
+
+<meta name="generator" content="Hexo 5.4.0">
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+<link rel="alternate" href="/atom.xml" title="Hyjwpk" type="application/atom+xml">
+</head>
+
+<script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
+
+
+   <style>
+    body{
+       background-image: url(/medias/featureimages/4.jpg);
+       background-repeat:no-repeat;
+       background-size:cover;
+       background-attachment:fixed;
+    }
+</style>
+
+
+
+<body>
+    <header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="nav-wrapper container">
+            <div class="brand-logo">
+                <a href="/" class="waves-effect waves-light">
+                    
+                    <img src="/medias/logo.png" class="logo-img" alt="LOGO">
+                    
+                    <span class="logo-span">Hyjwpk</span>
+                </a>
+            </div>
+            
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fas fa-bars"></i></a>
+<ul class="right nav-menu">
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/" class="waves-effect waves-light">
+      
+      <i class="fas fa-home" style="zoom: 0.6;"></i>
+      
+      <span>首页</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/tags" class="waves-effect waves-light">
+      
+      <i class="fas fa-tags" style="zoom: 0.6;"></i>
+      
+      <span>标签</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/categories" class="waves-effect waves-light">
+      
+      <i class="fas fa-bookmark" style="zoom: 0.6;"></i>
+      
+      <span>分类</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/archives" class="waves-effect waves-light">
+      
+      <i class="fas fa-archive" style="zoom: 0.6;"></i>
+      
+      <span>归档</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/about" class="waves-effect waves-light">
+      
+      <i class="fas fa-user-circle" style="zoom: 0.6;"></i>
+      
+      <span>关于</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/contact" class="waves-effect waves-light">
+      
+      <i class="fas fa-comments" style="zoom: 0.6;"></i>
+      
+      <span>留言板</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/friends" class="waves-effect waves-light">
+      
+      <i class="fas fa-address-book" style="zoom: 0.6;"></i>
+      
+      <span>友情链接</span>
+    </a>
+    
+  </li>
+  
+  <li>
+    <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+      <i id="searchIcon" class="fas fa-search" title="搜索" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+</ul>
+
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="/medias/logo.png" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">Hyjwpk</div>
+        <div class="logo-desc">
+            
+            Persist, and anything will be within your reach.
+            
+        </div>
+    </div>
+
+    
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li class="m-nav-item">
+	  
+		<a href="/" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-home"></i>
+			
+			首页
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/tags" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-tags"></i>
+			
+			标签
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/categories" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-bookmark"></i>
+			
+			分类
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/archives" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-archive"></i>
+			
+			归档
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/about" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-user-circle"></i>
+			
+			关于
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/contact" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-comments"></i>
+			
+			留言板
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/friends" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-address-book"></i>
+			
+			友情链接
+		</a>
+          
+        </li>
+        
+        
+        <li><div class="divider"></div></li>
+        <li>
+            <a href="https://github.com/hyjwpk/hyjwpk.github.io" class="waves-effect waves-light" target="_blank">
+                <i class="fab fa-github-square fa-fw"></i>Fork Me
+            </a>
+        </li>
+        
+    </ul>
+</div>
+
+
+        </div>
+
+        
+            <style>
+    .nav-transparent .github-corner {
+        display: none !important;
+    }
+
+    .github-corner {
+        position: absolute;
+        z-index: 10;
+        top: 0;
+        right: 0;
+        border: 0;
+        transform: scale(1.1);
+    }
+
+    .github-corner svg {
+        color: #007FFF;
+        fill: #fff;
+        height: 64px;
+        width: 64px;
+    }
+
+    .github-corner:hover .octo-arm {
+        animation: a 0.56s ease-in-out;
+    }
+
+    .github-corner .octo-arm {
+        animation: none;
+    }
+
+    @keyframes a {
+        0%,
+        to {
+            transform: rotate(0);
+        }
+        20%,
+        60% {
+            transform: rotate(-25deg);
+        }
+        40%,
+        80% {
+            transform: rotate(10deg);
+        }
+    }
+</style>
+
+<a href="https://github.com/hyjwpk/hyjwpk.github.io" class="github-corner tooltipped hide-on-med-and-down" target="_blank"
+   data-tooltip="Fork Me" data-position="left" data-delay="50">
+    <svg viewBox="0 0 250 250" aria-hidden="true">
+        <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
+        <path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2"
+              fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path>
+        <path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z"
+              fill="currentColor" class="octo-body"></path>
+    </svg>
+</a>
+        
+    </nav>
+
+</header>
+
+    
+
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/4.jpg')">
+    <div class="container" style="right: 0px;left: 0px;">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <h1 class="description center-align post-title">银行业务模拟</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<main class="post-container content">
+
+    
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+<style>
+    #articleContent h1::before,
+    #articleContent h2::before,
+    #articleContent h3::before,
+    #articleContent h4::before,
+    #articleContent h5::before,
+    #articleContent h6::before {
+        display: block;
+        content: " ";
+        height: 100px;
+        margin-top: -100px;
+        visibility: hidden;
+    }
+
+    #articleContent :focus {
+        outline: none;
+    }
+
+    .toc-fixed {
+        position: fixed;
+        top: 64px;
+    }
+
+    .toc-widget {
+        width: 345px;
+        padding-left: 20px;
+    }
+
+    .toc-widget .toc-title {
+        padding: 35px 0 15px 17px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    .toc-widget ol {
+        padding: 0;
+        list-style: none;
+    }
+
+    #toc-content {
+        padding-bottom: 30px;
+        overflow: auto;
+    }
+
+    #toc-content ol {
+        padding-left: 10px;
+    }
+
+    #toc-content ol li {
+        padding-left: 10px;
+    }
+
+    #toc-content .toc-link:hover {
+        color: #42b983;
+        font-weight: 700;
+        text-decoration: underline;
+    }
+
+    #toc-content .toc-link::before {
+        background-color: transparent;
+        max-height: 25px;
+
+        position: absolute;
+        right: 23.5vw;
+        display: block;
+    }
+
+    #toc-content .is-active-link {
+        color: #42b983;
+    }
+
+    #floating-toc-btn {
+        position: fixed;
+        right: 15px;
+        bottom: 76px;
+        padding-top: 15px;
+        margin-bottom: 0;
+        z-index: 998;
+    }
+
+    #floating-toc-btn .btn-floating {
+        width: 48px;
+        height: 48px;
+    }
+
+    #floating-toc-btn .btn-floating i {
+        line-height: 48px;
+        font-size: 1.4rem;
+    }
+</style>
+<div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                    <div class="article-tag">
+                        
+                            <a href="/tags/qt/">
+                                <span class="chip bg-color">qt</span>
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/%E5%A4%A7%E4%BD%9C%E4%B8%9A/" class="post-category">
+                                大作业
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
+                    2022-01-23
+                </div>
+                
+
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
+                    2023-02-04
+                </div>
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
+                    4.2k
+                </div>
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
+                    18 分
+                </div>
+                
+
+                
+            </div>
+        </div>
+        <hr class="clearfix">
+
+        
+        <!-- 是否加载使用自带的 prismjs. -->
+        <link rel="stylesheet" href="/libs/prism/prism.css">
+        
+
+        
+
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <h1 id="离散事件模拟实验报告（银行业务模拟）"><a href="#离散事件模拟实验报告（银行业务模拟）" class="headerlink" title="离散事件模拟实验报告（银行业务模拟）"></a>离散事件模拟实验报告（银行业务模拟）</h1><p>完成了<code>实验基本要求</code>、<code>图形化界面</code>、<code>实验附加要求：多个第一种队列的服务窗口，通过输入数字确定数量</code></p>
+<h2 id="实验要求"><a href="#实验要求" class="headerlink" title="实验要求"></a>实验要求</h2><h3 id="实验基本要求"><a href="#实验基本要求" class="headerlink" title="实验基本要求"></a>实验基本要求</h3><p><img src="image/%E5%AE%9E%E9%AA%8C%E8%A6%81%E6%B1%82.jpg" alt="实验要求"></p>
+<p>​    <strong>在此基础上实现图形化界面</strong></p>
+<h3 id="实验附加要求"><a href="#实验附加要求" class="headerlink" title="实验附加要求"></a>实验附加要求</h3><blockquote>
+<p>实现：多个第一种队列的服务窗口，通过输入数字确定数量（3 分）</p>
+</blockquote>
+<h2 id="设计思路"><a href="#设计思路" class="headerlink" title="设计思路"></a>设计思路</h2><h3 id="事件表与客户队列"><a href="#事件表与客户队列" class="headerlink" title="事件表与客户队列"></a>事件表与客户队列</h3><p>将银行中发生的事件分为两类，到达事件和离开事件，使用队列数据结构来存储事件表，队列中从队头到队尾依次按照事件发生的时间顺序进行排列，每次出队时队头即为下一个发生的事件</p>
+<p>将客户队列也使用队列数据结构进行存储，后来的客户直接入队，这样可以保证队列中先来后到的顺序</p>
+<p>开始时向事件表中添加到达事件，在处理每一个到达事件时添加下一个到达事件。当客户队列非空时向事件表中添加离开事件，当处理离开事件时如果客户队列仍非空添加下一个离开事件，这样即可完成事件的驱动。</p>
+<p>在处理客户时，若申请金额超出银行资金，则将其排入第二个队列等候。在每一个客户离开时统计其完成业务的等待时间，当银行营业结束后输出最终结果。</p>
+<h3 id="队列数据结构的实现"><a href="#队列数据结构的实现" class="headerlink" title="队列数据结构的实现"></a>队列数据结构的实现</h3><pre class="line-numbers language-C++" data-language="C++"><code class="language-C++">/**
+ * @brief 队列的基本节点
+ * @details data数组在客户队列中存储[0]-ArrivalTime [1]-money [2]-duration
+ * @details data数组在事件队列中存储[0]-OccurTime [1]-Type
+*/
+typedef struct QNode
+{
+	QNode();
+	QNode(int(&amp;data)[3]);
+	int data[3];
+	QNode* next;
+} QNode, * QuenePtr;
+
+typedef struct LinkQunene
+{
+	LinkQunene();
+	QuenePtr front;
+	QuenePtr rear;
+} LinkQunene;
+
+class Quene
+{
+public:
+	Quene();
+	void enQuene(int(&amp;data)[3]);
+	void deQuene(int(&amp;data)[3]);
+
+	/**
+	 * @brief 根据data[0]中存储的值升序排列
+	*/
+	void enQueneInOrder(int(&amp;data)[3]);
+	void moveFrontToRear();
+	int getLength();
+	QNode* getFront();
+	void print();
+	~Quene();
+
+private:
+	LinkQunene quene;
+	int length;
+};<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>实现了队列节点<code>QNode</code>，队列<code>LinkQuene</code>，以及队列数据类型<code>Quene</code></p>
+<p><code>Quene</code>中包含<strong>入队</strong>、<strong>出队</strong>、<strong>按序入队</strong>、<strong>获得长度</strong>、<strong>获得头节点</strong>、<strong>输出队列信息</strong>等基本操作</p>
+<h3 id="银行类的实现"><a href="#银行类的实现" class="headerlink" title="银行类的实现"></a>银行类的实现</h3><pre class="line-numbers language-C++" data-language="C++"><code class="language-C++">class Bank
+{
+public:
+	/**
+	 * @brief 构造函数
+	 * @details 存取金额范围为 [-moneyScope, moneyScope-1]
+	 * @details 处理业务时间范围为 [1,durationScope]
+	 * @details 到来间隔时间范围为 [1,intertimeScope]
+	 * @param totalMoney 总金额
+	 * @param closeTime 营业时间
+	 * @param moneyScope 客户存取金额范围
+	 * @param durationScope 客户处理业务时间范围
+	 * @param intertimeScope 客户到来间隔时间范围
+	*/
+	Bank(const int totalMoney = 10000, const int closeTime = 100000, const int moneyScope = 5000, const int durationScope = 15, const int intertimeScope = 30);
+
+	/**
+	 * @brief 处理事件
+	 * @details data[1]存储事件种类Type，0-到达事件， 1-withdrawMoneyList离开事件，2-customerList1离开事件
+	 * @deatils 事件的发生时间必须小于closeTime
+	*/
+	void handleEvent();
+	bool isEventListNotEmpty();
+
+	/**
+	 * @brief 输出模拟结果
+	 * @return 客户平均耗时
+	*/
+	int printResult();
+
+	/**
+	 * @brief 输出当前银行状态
+	*/
+	void printCurrentCondition();
+
+private:
+
+	/**
+	 * @brief 总金额
+	*/
+	int totalMoney;
+
+	/**
+	 * @brief 营业时间
+	*/
+	int closeTime;
+
+	/**
+	 * @brief 客户总等待时间
+	*/
+	int totalTime;
+
+	/**
+	 * @brief 客户总等待时间
+	*/
+	int customerNum;
+
+	bool dealingWithdrawMoneyList;
+	int moneyScope;
+	int durationScope;
+	int intertimeScope;
+	int bottomMoney;
+	Quene withdrawMoneyList;
+	Quene customerList1;
+	Quene eventList;
+	/**
+	 * @brief 处理客户的离开事件
+	 * @param leaveTime 离开事件的发生时间
+	 * @param type 1-withdrawMoneyList 2-customerList1
+	*/
+	void departure(const int leaveTime, const int type);
+	void customerArrived(const int arriveTime);
+
+	/**
+	 * @brief 检查并处理withdrawMoneyList中的客户
+	 * @details 每次检查队头客户，若银行钱不够取则将将该客户排到队尾
+	 * @details 直到所有客户都被检查一遍
+	 * @details 或者银行钱已经少于上一个客户存钱之前的金额
+	 * @param startTime 上一个存钱客户的离开时间
+	*/
+	void withdrawMoneyListCheck(const int startTime);
+
+	/**
+	 * @brief 生成离开事件并插入事件表
+	 * @details 插入的客户一定在队头
+	 * @details 若银行钱足够并且能在营业时间完成则插入成功
+	 * @param startTime 开始处理顾客的时间
+	 * @param type 1-withdrawMoneyList 2-customerList1
+	 * @return 0-插入成功 -1-银行缺钱 1-超出营业时间
+	*/
+	int generateLeaveEvent(const int startTime, const int type);
+};<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>银行类中存储了银行<strong>总金额</strong>、<strong>营业时间</strong>等信息,实现了<strong>事件处理</strong>、<strong>输出结果</strong>等基本功能。</p>
+<h3 id="附加功能的实现"><a href="#附加功能的实现" class="headerlink" title="附加功能的实现"></a>附加功能的实现</h3><pre class="line-numbers language-C++" data-language="C++"><code class="language-C++">Quene *customerList;
+customerList = new Quene[listNum];
+int getSmallerListNum();<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<p>创建一个第一种队列的数组，并编写从中获取最短队列的函数</p>
+<h3 id="图形化界面的实现"><a href="#图形化界面的实现" class="headerlink" title="图形化界面的实现"></a>图形化界面的实现</h3><p>通过qt实现图形化界面，对第一种队列数为1的情况做出具体的中间过程模拟</p>
+<h2 id="关键代码讲解"><a href="#关键代码讲解" class="headerlink" title="关键代码讲解"></a>关键代码讲解</h2><h3 id="队列"><a href="#队列" class="headerlink" title="队列"></a>队列</h3><pre class="line-numbers language-C++" data-language="C++"><code class="language-C++">void Quene::enQueneInOrder(int(&amp;data)[3])
+{
+	QuenePtr front = quene.front;
+	if (front == NULL)
+	{
+		enQuene(data);
+	}
+	else
+	{
+		QuenePtr node = new QNode(data);
+		if (node == NULL)
+			abort();
+		if (node-&gt;data[0] &lt; front-&gt;data[0])
+		{
+			node-&gt;next = front;
+			quene.front = node;
+		}
+		else
+		{
+			QuenePtr pre = quene.front;
+			QuenePtr cur = pre-&gt;next;
+			while (cur)
+			{
+				if (pre-&gt;data[0] &lt;= data[0] &amp;&amp; data[0] &lt;= cur-&gt;data[0])
+					break;
+				pre = cur;
+				cur = pre-&gt;next;
+			}
+			pre-&gt;next = node;
+			node-&gt;next = cur;
+			if (!cur)
+				quene.rear = node;
+		}
+		length++;
+	}
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>队列数据结构中实现了通过逐个比较队列中节点的<code>data</code>域来寻找入队时合适的插入位置，以便完成事件表的按序排列</p>
+<pre class="line-numbers language-C++" data-language="C++"><code class="language-C++">void Quene::moveFrontToRear()
+{
+	if (length &gt; 1)
+	{
+		QuenePtr front = quene.front;
+		quene.front = front-&gt;next;
+		front-&gt;next = NULL;
+		quene.rear-&gt;next = front;
+		quene.rear = front;
+	}
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>此处实现将队头节点移动到队尾，以便实现循环检测取钱的第二个队中是否有人可以取钱</p>
+<h3 id="银行类"><a href="#银行类" class="headerlink" title="银行类"></a>银行类</h3><pre class="line-numbers language-C++" data-language="C++"><code class="language-C++">Bank::Bank(const int totalMoney, const int closeTime, const int moneyScope, const int durationScope, const int intertimeScope) : totalMoney(totalMoney),
+closeTime(closeTime), totalTime(0), customerNum(0), dealingWithdrawMoneyList(false), moneyScope(moneyScope), durationScope(durationScope),
+intertimeScope(intertimeScope), bottomMoney(0)
+{
+	//插入第一个到达事件
+	int arrive[3] = { 0, 0, 0 };
+	eventList.enQueneInOrder(arrive);
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>构造函数中初始化<strong>银行总金额</strong>、<strong>营业时间</strong>、<strong>客户存取金额上限</strong>、<strong>客户办理业务时间上限</strong>、<strong>客户到达间隔上限</strong>，并插入第一个到达事件</p>
+<pre class="line-numbers language-C++" data-language="C++"><code class="language-C++">void Bank::handleEvent()
+{
+	int event[3];
+	eventList.deQuene(event);
+	switch (event[1])
+	{
+	case 0:
+		customerArrived(event[0]);
+		break;
+	case 1: case 2:
+		departure(event[0], event[1]);
+		break;
+	}
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>事件处理函数中根据事件表头的事件类型进行处理，0代表到达事件，其它数字代表离开事件，并用不同数字来区分不同队列的离开事件</p>
+<pre class="line-numbers language-C++" data-language="C++"><code class="language-C++">void Bank::customerArrived(const int arriveTime)
+{
+	int money = rand() % moneyScope;
+	money = (rand() % 2) &gt; 0 ? money : -money;
+	int duration = rand() % durationScope + 1;
+	int customer[3] = { arriveTime, money, duration };
+
+	//customerList1队尾插入新客户
+	customerList1.enQuene(customer);
+	int intertime = rand() % intertimeScope + 1;
+
+	//在营业结束前新客户到来则插入到来事件
+	if (arriveTime + intertime &lt; closeTime)
+	{
+		int newarrive[3] = { arriveTime + intertime, 0, 0 };
+		eventList.enQueneInOrder(newarrive);
+	}
+
+	//若此时未处理取钱客户 且 customerList1仅有1位刚到达客户
+	//试图处理这位客户
+	if (!dealingWithdrawMoneyList &amp;&amp; customerList1.getLength() == 1)
+	{
+		int condition = generateLeaveEvent(arriveTime, 2);
+		if (condition == -1)
+		{
+			int customer[3];
+			customerList1.deQuene(customer);
+			withdrawMoneyList.enQuene(customer);
+		}
+	}
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>客户到达时调用该函数进行处理，随机生成客户存取金额，办理业务事件、下一客户到达时间，并将下一客户的到达事件插入事件表中，若该客户为当前排队的第一个客户则试图插入这位客户的离开事件</p>
+<pre class="line-numbers language-C++" data-language="C++"><code class="language-C++">void Bank::departure(const int leaveTime, const int type)
+{
+	int customer[3];
+	if (type == 1)
+	{
+		withdrawMoneyList.deQuene(customer);
+		dealingWithdrawMoneyList = false;
+		withdrawMoneyListCheck(leaveTime);
+	}
+	else if (type == 2)
+		customerList1.deQuene(customer);
+	else
+	{
+		abort();
+	}
+
+	//客户等待时间为离开时间-到达时间
+	totalTime += leaveTime - customer[0];
+	totalMoney += customer[1];
+	customerNum++;
+	if (customer[1] &gt; 0)
+	{
+		bottomMoney = totalMoney - customer[1];
+		withdrawMoneyListCheck(leaveTime);
+	}
+
+	//若没有正在处理的客户
+	if (!dealingWithdrawMoneyList)
+	{
+		int condition;
+
+		//循环检查customerList1队头顾客并将银行钱不够取的顾客插入withdrawMoneyList
+		//直到队列为空
+		while ((customerList1.getLength() != 0) &amp;&amp; (condition = generateLeaveEvent(leaveTime, 2)) == -1)
+		{
+			int customer[3];
+			customerList1.deQuene(customer);
+			withdrawMoneyList.enQuene(customer);
+		}
+	}
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>客户离开时调用该函数进行处理，将对应客户出队，将客户办理业务事件存储，更新银行的金额，如果这个客户存钱则检查取钱队列中是否有客户可以满足，如果没有就插入下一个客户的离开事件</p>
+<pre class="line-numbers language-C++" data-language="C++"><code class="language-C++">void Bank::withdrawMoneyListCheck(const int startTime)
+{
+	if (withdrawMoneyList.getLength() == 0 || totalMoney &lt;= bottomMoney || dealingWithdrawMoneyList)
+		return;
+	QuenePtr oldfirst = withdrawMoneyList.getFront();
+	do
+	{
+		int condition = generateLeaveEvent(startTime, 1);
+		if (condition == 0)
+		{
+			dealingWithdrawMoneyList = true;
+			break;
+		}
+		else
+		{
+			withdrawMoneyList.moveFrontToRear();
+		}
+	} while (withdrawMoneyList.getFront() != oldfirst);
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>进行取钱客户队列的检查，如果队头的客户不能满足，则将队头客户排至队尾，直到发现可以满足的客户，或者整个队列循环一次为止。如果在处理过程中银行的钱已经少于开始处理时的钱，则剩下的客户必定不能满足，直接退出函数</p>
+<pre class="line-numbers language-C++" data-language="C++"><code class="language-C++">int Bank::generateLeaveEvent(const int startTime, const int type)
+{
+	QuenePtr front;
+	if (type == 1)
+	{
+		front = withdrawMoneyList.getFront();
+	}
+	else if (type == 2)
+	{
+		front = customerList1.getFront();
+	}
+	else
+	{
+		abort();
+	}
+	if (totalMoney + front-&gt;data[1] &lt; 0) return -1;
+	if (startTime + front-&gt;data[2] &gt;= closeTime) return 1;
+	int leave[3] = { startTime + front-&gt;data[2], type, 0 };
+	eventList.enQueneInOrder(leave);
+	return 0;
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>检查当前银行的金额能否满足，处理所需时间是否超出银行营业时间，如果都符合要求则插入客户的离开事件</p>
+<h3 id="附加功能"><a href="#附加功能" class="headerlink" title="附加功能"></a>附加功能</h3><pre class="line-numbers language-C++" data-language="C++"><code class="language-C++">int BankAdvanced::getSmallerListNum()
+{
+	int min = customerList[0].getLength(), minNum = 2;
+	for (int i = 1; i &lt; listNum; i++)
+	{
+		if (customerList[i].getLength() &lt; min)
+		{
+			min = customerList[i].getLength();
+			minNum = i + 2;
+		}
+	}
+	return minNum;
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>每次插入前获取最短队列，并插入到最短队列中</p>
+<h3 id="图形化的实现"><a href="#图形化的实现" class="headerlink" title="图形化的实现"></a>图形化的实现</h3><p><img src="image/mainwindow.jpg" alt="主界面"></p>
+<pre class="line-numbers language-C++" data-language="C++"><code class="language-C++">void MainWindow::on_simulation_clicked()
+{
+    int totalmoney = ui-&gt;totalmoney-&gt;text().toInt();
+    int closetime = ui-&gt;closetime-&gt;text().toInt();
+    int moneyscope = ui-&gt;moneyscope-&gt;text().toInt();
+    int durationscope = ui-&gt;durationscope-&gt;text().toInt();
+    int intertimescope = ui-&gt;intertimescope-&gt;text().toInt();
+    int listnum = ui-&gt;listnum-&gt;text().toInt();
+    if(listnum == 1)
+    {
+        this-&gt;hide();
+        Bank *bank = new Bank(totalmoney,closetime,moneyscope,durationscope,intertimescope);
+        Step *step=new Step();
+        step-&gt;setBank(bank);
+        step-&gt;show();
+        step-&gt;exec();
+        this-&gt;show();
+        while (bank-&gt;isEventListNotEmpty())
+        {
+            bank-&gt;handleEvent();
+        }
+        QString string = QString("平均用时：")+QString::number(bank-&gt;printResult());
+        ui-&gt;value-&gt;setText(string);
+        delete(bank);
+    }
+    else
+    {
+        BankAdvanced *bank = new BankAdvanced(totalmoney,closetime,moneyscope,durationscope,intertimescope,listnum);
+        while (bank-&gt;isEventListNotEmpty())
+        {
+            bank-&gt;handleEvent();
+        }
+        QString string = QString("平均用时：")+QString::number(bank-&gt;printResult());
+        ui-&gt;value-&gt;setText(string);
+        delete(bank);
+    }
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>点击按钮后获取主界面中填入的参数并传入Bank类中得到结果后进行输出</p>
+<p>如果设定的第一种队列个数为1，会打开中间模拟窗口，隐藏主窗口，待中间模拟窗口关闭后重新显示主窗口</p>
+<p><img src="image/step.jpg" alt="中间模拟"></p>
+<pre class="line-numbers language-C++" data-language="C++"><code class="language-C++">void Step::on_nextStep_clicked()
+{
+    if((bank-&gt;isEventListNotEmpty()))
+    {
+        bank-&gt;handleEvent();
+        ui-&gt;totalMoney-&gt;setText(QString::number(bank-&gt;totalMoney));
+        ui-&gt;eventList-&gt;clearContents();
+        ui-&gt;withdrawMoneyList-&gt;clearContents();
+        ui-&gt;customerList1-&gt;clearContents();
+        QNode *node;
+        node = bank-&gt;eventList.getFront();
+        for(int i=0;node&amp;&amp;i&lt;13;i++)
+        {
+            ui-&gt;eventList-&gt;setItem(i,0,new QTableWidgetItem(QString::number(node-&gt;data[0])));
+            ui-&gt;eventList-&gt;setItem(i,1,new QTableWidgetItem(QString::number(node-&gt;data[1])));
+            node=node-&gt;next;
+        }
+        node = bank-&gt;withdrawMoneyList.getFront();
+        for(int i=0;node&amp;&amp;i&lt;13;i++)
+        {
+            ui-&gt;withdrawMoneyList-&gt;setItem(i,0,new QTableWidgetItem(QString::number(node-&gt;data[0])));
+            ui-&gt;withdrawMoneyList-&gt;setItem(i,1,new QTableWidgetItem(QString::number(node-&gt;data[1])));
+            ui-&gt;withdrawMoneyList-&gt;setItem(i,2,new QTableWidgetItem(QString::number(node-&gt;data[2])));
+            node=node-&gt;next;
+        }
+        node = bank-&gt;customerList1.getFront();
+        for(int i=0;node&amp;&amp;i&lt;13;i++)
+        {
+            ui-&gt;customerList1-&gt;setItem(i,0,new QTableWidgetItem(QString::number(node-&gt;data[0])));
+            ui-&gt;customerList1-&gt;setItem(i,1,new QTableWidgetItem(QString::number(node-&gt;data[1])));
+            ui-&gt;customerList1-&gt;setItem(i,2,new QTableWidgetItem(QString::number(node-&gt;data[2])));
+            node=node-&gt;next;
+        }
+    }
+    else
+        accept();
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>点击按钮时会进行下一个事件的处理，并将事件处理后的结果显示</p>
+<h2 id="调试分析"><a href="#调试分析" class="headerlink" title="调试分析"></a>调试分析</h2><h3 id="时间复杂度"><a href="#时间复杂度" class="headerlink" title="时间复杂度"></a>时间复杂度</h3><p>在银行金额充足的情况下，每个客户只需要被遍历一遍即可完成处理，时间复杂度为<code>O(n)</code>，但在银行金额不够大多数用户取时，每有一个用户存钱，就会遍历整个取钱队列，最差时间复杂度为<code>O(n^n)</code></p>
+<h3 id="空间复杂度"><a href="#空间复杂度" class="headerlink" title="空间复杂度"></a>空间复杂度</h3><p>每个客户只需要一个节点进行存储，每个客户分别对应一个到达事件和一个离开事件，空间复杂度为<code>O(n)</code></p>
+<h3 id="遇到的bug"><a href="#遇到的bug" class="headerlink" title="遇到的bug"></a>遇到的bug</h3><h4 id="bug1"><a href="#bug1" class="headerlink" title="bug1"></a>bug1</h4><ul>
+<li>bug内容：在尝试让队头的客户排到队尾时陷入死循环</li>
+<li>bug原因：每次将队头的空间释放后重新申请空间创建节点插入队尾，导致无法判断整个队列是否循环一次</li>
+<li>解决方案：不进行空间的释放和重新申请，通过指针的改变直接改变队列的结构，以便通过节点的地址判断是否循环一次</li>
+</ul>
+<h4 id="bug2"><a href="#bug2" class="headerlink" title="bug2"></a>bug2</h4><ul>
+<li>bug内容：队列中只有1个客户时，让队头的客户排到队尾时发生空指针异常</li>
+<li>bug原因：队列只有一个客户时无法将自身插入到自身的后面</li>
+<li>解决方案：对队列中只有1个客户的情况进行单独判断</li>
+</ul>
+<h2 id="代码测试"><a href="#代码测试" class="headerlink" title="代码测试"></a>代码测试</h2><h3 id="运行状态测试"><a href="#运行状态测试" class="headerlink" title="运行状态测试"></a>运行状态测试</h3><p>参数为：银行总金额 = 10000, 营业时间 = 100, 客户存取金额上限 = 5000, 客户办理业务时间上限 = 15, 客户到达间隔上限 = 30</p>
+<pre class="line-numbers language-none"><code class="language-none">event list:
+(0,0,0)
+customerList1:
+withdrawMoneyList:
+totalMoney:10000
+totalTime:0
+customerNum:0
+dealingWithdrawMoneyList:0
+
+event list:
+(5,2,0)
+(11,0,0)
+customerList1:
+(0,41,5)
+withdrawMoneyList:
+totalMoney:10000
+totalTime:0
+customerNum:0
+dealingWithdrawMoneyList:0
+
+event list:
+(11,0,0)
+customerList1:
+withdrawMoneyList:
+totalMoney:10041
+totalTime:5
+customerNum:1
+dealingWithdrawMoneyList:0
+
+event list:
+(15,2,0)
+(30,0,0)
+customerList1:
+(11,-4169,4)
+withdrawMoneyList:
+totalMoney:10041
+totalTime:5
+customerNum:1
+dealingWithdrawMoneyList:0
+
+event list:
+(30,0,0)
+customerList1:
+withdrawMoneyList:
+totalMoney:5872
+totalTime:9
+customerNum:2
+dealingWithdrawMoneyList:0
+
+event list:
+(36,0,0)
+(36,2,0)
+customerList1:
+(30,-1962,6)
+withdrawMoneyList:
+totalMoney:5872
+totalTime:9
+customerNum:2
+dealingWithdrawMoneyList:0
+
+event list:
+(36,2,0)
+(48,0,0)
+customerList1:
+(30,-1962,6)
+(36,3281,2)
+withdrawMoneyList:
+totalMoney:5872
+totalTime:9
+customerNum:2
+dealingWithdrawMoneyList:0
+
+event list:
+(38,2,0)
+(48,0,0)
+customerList1:
+(36,3281,2)
+withdrawMoneyList:
+totalMoney:3910
+totalTime:15
+customerNum:3
+dealingWithdrawMoneyList:0
+
+event list:
+(48,0,0)
+customerList1:
+withdrawMoneyList:
+totalMoney:7191
+totalTime:17
+customerNum:4
+dealingWithdrawMoneyList:0
+
+event list:
+(55,0,0)
+(61,2,0)
+customerList1:
+(48,-2995,13)
+withdrawMoneyList:
+totalMoney:7191
+totalTime:17
+customerNum:4
+dealingWithdrawMoneyList:0
+
+event list:
+(59,0,0)
+(61,2,0)
+customerList1:
+(48,-2995,13)
+(55,-2391,3)
+withdrawMoneyList:
+totalMoney:7191
+totalTime:17
+customerNum:4
+dealingWithdrawMoneyList:0
+
+event list:
+(61,2,0)
+(86,0,0)
+customerList1:
+(48,-2995,13)
+(55,-2391,3)
+(59,-292,7)
+withdrawMoneyList:
+totalMoney:7191
+totalTime:17
+customerNum:4
+dealingWithdrawMoneyList:0
+
+event list:
+(64,2,0)
+(86,0,0)
+customerList1:
+(55,-2391,3)
+(59,-292,7)
+withdrawMoneyList:
+totalMoney:4196
+totalTime:30
+customerNum:5
+dealingWithdrawMoneyList:0
+
+event list:
+(71,2,0)
+(86,0,0)
+customerList1:
+(59,-292,7)
+withdrawMoneyList:
+totalMoney:1805
+totalTime:39
+customerNum:6
+dealingWithdrawMoneyList:0
+
+event list:
+(86,0,0)
+customerList1:
+withdrawMoneyList:
+totalMoney:1513
+totalTime:51
+customerNum:7
+dealingWithdrawMoneyList:0
+
+event list:
+(89,2,0)
+(93,0,0)
+customerList1:
+(86,4718,3)
+withdrawMoneyList:
+totalMoney:1513
+totalTime:51
+customerNum:7
+dealingWithdrawMoneyList:0
+
+event list:
+(93,0,0)
+customerList1:
+withdrawMoneyList:
+totalMoney:6231
+totalTime:54
+customerNum:8
+dealingWithdrawMoneyList:0
+
+event list:
+customerList1:
+(93,-4771,10)
+withdrawMoneyList:
+totalMoney:6231
+totalTime:54
+customerNum:8
+dealingWithdrawMoneyList:0
+
+6
+BankingSimulation.exe (进程 7008)已退出，代码为 0。
+按任意键关闭此窗口. . .<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>程序运行中间状态正常</p>
+<h3 id="运行结果测试"><a href="#运行结果测试" class="headerlink" title="运行结果测试"></a>运行结果测试</h3><h4 id="测试1-单队列"><a href="#测试1-单队列" class="headerlink" title="测试1(单队列)"></a>测试1(单队列)</h4><p>参数为：银行总金额 = 10000, 营业时间 = 100000, 客户存取金额上限 = 5000, 客户办理业务时间上限 = 15, 客户到达间隔上限 = 30</p>
+<pre class="line-numbers language-none"><code class="language-none">30
+BankingSimulation.exe (进程 4284)已退出，代码为 0。
+按任意键关闭此窗口. . .<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<p>在<strong>客户到达间隔上限</strong>远大于<strong>办理业务时间上限</strong>时，平均处理时间趋近于<strong>客户到达间隔上限</strong></p>
+<h4 id="测试2-单队列"><a href="#测试2-单队列" class="headerlink" title="测试2(单队列)"></a>测试2(单队列)</h4><p>参数为：银行总金额 = 10000, 营业时间 = 100000, 客户存取金额上限 = 5000, 客户办理业务时间上限 = 15, 客户到达间隔上限 = 15</p>
+<pre class="line-numbers language-none"><code class="language-none">245
+BankingSimulation.exe (进程 16512)已退出，代码为 0。
+按任意键关闭此窗口. . .<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<p>在<strong>客户到达间隔上限</strong>与<strong>办理业务时间上限</strong>接近时，平均处理时间远大于<strong>客户到达间隔上限</strong></p>
+<h4 id="测试3-多队列"><a href="#测试3-多队列" class="headerlink" title="测试3(多队列)"></a>测试3(多队列)</h4><p>参数为：银行总金额 = 10000, 营业时间 = 100000, 客户存取金额上限 = 5000, 客户办理业务时间上限 = 15, 客户到达间隔上限 = 15, 队列数 = 5</p>
+<pre class="line-numbers language-none"><code class="language-none">21
+BankingSimulation.exe (进程 17852)已退出，代码为 0。
+按任意键关闭此窗口. . .<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<p>在<strong>第一种队列增加后</strong>，平均处理时间明显下降</p>
+<h3 id="图形化测试"><a href="#图形化测试" class="headerlink" title="图形化测试"></a>图形化测试</h3><p><img src="image/test.jpg" alt="测试"></p>
+<p>程序能正常模拟出中间过程，并在窗口关闭后自动显示主界面</p>
+<p><img src="image/mainwindow.jpg" alt="主界面"></p>
+<div style="page-break-after: always;"></div>
+
+<h2 id="实验总结"><a href="#实验总结" class="headerlink" title="实验总结"></a>实验总结</h2><p>通过这次实验，我熟练掌握了离散事件模拟的问题分析与算法设计，熟悉了队列数据结构的使用，学习了使用qt进行图形化的方法，并学习了自己设计参数进行测试的过程。通过编写这样一个小项目，提高了代码组织能力和问题的发现与解决能力，同时对于生活中的银行排队问题有了更深入的理解。</p>
+<h2 id="附录"><a href="#附录" class="headerlink" title="附录"></a>附录</h2><ul>
+<li><p>Bank.h</p>
+<p>Bank类头文件</p>
+</li>
+<li><p>Bank.cpp</p>
+<p>Bank类的实现，程序的主要模拟功能部分</p>
+</li>
+<li><p>BankAdvanced.h</p>
+<p>BankAdvanced类头文件</p>
+</li>
+<li><p>BankAdvanced.cpp</p>
+<p>BankAdvanced类的实现，程序的附加模拟功能部分，实现多条第一种队列的模拟</p>
+</li>
+<li><p>Quene.h</p>
+<p>Quene类的头文件</p>
+</li>
+<li><p>Quene.cpp</p>
+<p>Quene类的实现，实现队列数据结构</p>
+</li>
+<li><p>step.h</p>
+<p>step类头文件</p>
+</li>
+<li><p>step.cpp</p>
+<p>step类的实现，使用QDialog实现过程模拟</p>
+</li>
+<li><p>step.ui</p>
+<p>qtUi文件，实现过程模拟的界面</p>
+</li>
+<li><p>mainwindow.h</p>
+<p>mainwindow类头文件</p>
+</li>
+<li><p>mainwindow.cpp</p>
+<p>mainwindow类的实现，实现主界面</p>
+</li>
+<li><p>mainwindow.ui</p>
+<p>qtUi文件，实现主界面</p>
+</li>
+<li><p>main.cpp</p>
+<p>实现主函数，调用mainwindow</p>
+</li>
+</ul>
+
+                
+            </div>
+            <hr/>
+
+            
+
+    <div class="reprint" id="reprint-statement">
+        
+            <div class="reprint__author">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-user">
+                        文章作者:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="/about" rel="external nofollow noreferrer">Hyjwpk</a>
+                </span>
+            </div>
+            <div class="reprint__type">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-link">
+                        文章链接:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="http://hyjwpk.github.io/2022/01/23/yin-xing-ye-wu-mo-ni/">http://hyjwpk.github.io/2022/01/23/yin-xing-ye-wu-mo-ni/</a>
+                </span>
+            </div>
+            <div class="reprint__notice">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-copyright">
+                        版权声明:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    本博客所有文章除特別声明外，均采用
+                    <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
+                    许可协议。转载请注明来源
+                    <a href="/about" target="_blank">Hyjwpk</a>
+                    !
+                </span>
+            </div>
+        
+    </div>
+
+    <script async defer>
+      document.addEventListener("copy", function (e) {
+        let toastHTML = '<span>复制成功，请遵循本文的转载规则</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">查看</a>';
+        M.toast({html: toastHTML})
+      });
+
+      function navToReprintStatement() {
+        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
+      }
+    </script>
+
+
+
+            <div class="tag_share" style="display: block;">
+                <div class="post-meta__tag-list" style="display: inline-block;">
+                    
+                        <div class="article-tag">
+                            
+                                <a href="/tags/qt/">
+                                    <span class="chip bg-color">qt</span>
+                                </a>
+                            
+                        </div>
+                    
+                </div>
+                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
+                    <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+<div id="article-share">
+
+    
+    <div class="social-share" data-sites="twitter,facebook,google,qq,qzone,wechat,weibo,douban,linkedin" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+    <script src="/libs/share/js/social-share.min.js"></script>
+    
+
+    
+
+</div>
+
+                </div>
+            </div>
+            
+        </div>
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+            <div class="card">
+                <a href="/2022/01/24/huffman-bian-ma/">
+                    <div class="card-image">
+                        
+                        <img src="/medias/featureimages/5.jpg" class="responsive-img" alt="Huffman 编码">
+                        
+                        <span class="card-title">Huffman 编码</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2022-01-24
+                        </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E5%A4%A7%E4%BD%9C%E4%B8%9A/" class="post-category">
+                                    大作业
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/qt/">
+                        <span class="chip bg-color">qt</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2021/08/08/shu-du/">
+                    <div class="card-image">
+                        
+                        <img src="/medias/featureimages/1.jpg" class="responsive-img" alt="数独">
+                        
+                        <span class="card-title">数独</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-08-08
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E5%A4%A7%E4%BD%9C%E4%B8%9A/" class="post-category">
+                                    大作业
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/unity/">
+                        <span class="chip bg-color">unity</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+
+</div>
+
+
+
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
+
+<!-- 代码语言 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
+
+
+<!-- 代码块复制 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
+
+
+<!-- 代码块收缩 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
+
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget card" style="background-color: white;">
+            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;目录</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fas fa-list-ul"></i>
+    </a>
+</div>
+
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            collapseDepth: Number('0'),
+            headingSelector: 'h2, h3, h4'
+        });
+
+        // modify the toc link href to support Chinese.
+        let i = 0;
+        let tocHeading = 'toc-heading-';
+        $('#toc-content a').each(function () {
+            $(this).attr('href', '#' + tocHeading + (++i));
+        });
+
+        // modify the heading title id to support Chinese.
+        i = 0;
+        $('#articleContent').children('h2, h3, h4').each(function () {
+            $(this).attr('id', tocHeading + (++i));
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).hide();
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).show();
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
+
+    
+
+</main>
+
+
+
+
+    <footer class="page-footer bg-color">
+    
+        <link rel="stylesheet" href="/libs/aplayer/APlayer.min.css">
+<style>
+    .aplayer .aplayer-lrc p {
+        
+        display: none;
+        
+        font-size: 12px;
+        font-weight: 700;
+        line-height: 16px !important;
+    }
+
+    .aplayer .aplayer-lrc p.aplayer-lrc-current {
+        
+        display: none;
+        
+        font-size: 15px;
+        color: #42b983;
+    }
+
+    
+    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body {
+        left: -66px !important;
+    }
+
+    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body:hover {
+        left: 0px !important;
+    }
+
+    
+</style>
+<div class="">
+    
+    <div class="row">
+        <meting-js class="col l8 offset-l2 m10 offset-m1 s12"
+                   server="netease"
+                   type="playlist"
+                   id="2722795475"
+                   fixed='true'
+                   autoplay='false'
+                   theme='#42b983'
+                   loop='all'
+                   order='random'
+                   preload='auto'
+                   volume='0.7'
+                   list-folded='true'
+        >
+        </meting-js>
+    </div>
+</div>
+
+<script src="/libs/aplayer/APlayer.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
+
+    
+    <div class="container row center-align" style="margin-bottom: 0px !important;">
+        <div class="col s12 m8 l8 copy-right">
+            Copyright&nbsp;&copy;
+            
+                <span id="year">2019-2023</span>
+            
+            <span id="year">2023</span>
+            <a href="/about" target="_blank">Hyjwpk</a>
+            |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
+            |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
+            <br>
+            
+            &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
+                class="white-color">41.8k</span>&nbsp;字
+            
+            
+            
+            
+            
+            
+            <span id="busuanzi_container_site_pv">
+                |&nbsp;<i class="far fa-eye"></i>&nbsp;总访问量:&nbsp;<span id="busuanzi_value_site_pv"
+                    class="white-color"></span>&nbsp;次
+            </span>
+            
+            
+            <span id="busuanzi_container_site_uv">
+                |&nbsp;<i class="fas fa-users"></i>&nbsp;总访问人数:&nbsp;<span id="busuanzi_value_site_uv"
+                    class="white-color"></span>&nbsp;人
+            </span>
+            
+            <br>
+            
+            <br>
+            
+        </div>
+        <div class="col s12 m4 l4 social-link social-statis">
+    <a href="https://github.com/hyjwpk" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+        <i class="fab fa-github"></i>
+    </a>
+
+
+
+    <a href="mailto:2359105286@qq.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+        <i class="fas fa-envelope-open"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=2359105286" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 2359105286" data-position="top" data-delay="50">
+        <i class="fab fa-qq"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
+        <i class="fas fa-rss"></i>
+    </a>
+
+</div>
+    </div>
+</footer>
+
+<div class="progress-bar"></div>
+
+
+    <!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;搜索</span>
+            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字"
+                   class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script type="text/javascript">
+$(function () {
+    var searchFunc = function (path, search_id, content_id) {
+        'use strict';
+        $.ajax({
+            url: path,
+            dataType: "xml",
+            success: function (xmlResponse) {
+                // get the contents from search data
+                var datas = $("entry", xmlResponse).map(function () {
+                    return {
+                        title: $("title", this).text(),
+                        content: $("content", this).text(),
+                        url: $("url", this).text()
+                    };
+                }).get();
+                var $input = document.getElementById(search_id);
+                var $resultContent = document.getElementById(content_id);
+                $input.addEventListener('input', function () {
+                    var str = '<ul class=\"search-result-list\">';
+                    var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+                    $resultContent.innerHTML = "";
+                    if (this.value.trim().length <= 0) {
+                        return;
+                    }
+                    // perform local searching
+                    datas.forEach(function (data) {
+                        var isMatch = true;
+                        var data_title = data.title.trim().toLowerCase();
+                        var data_content = data.content.trim().replace(/<[^>]+>/g, "").toLowerCase();
+                        var data_url = data.url;
+                        data_url = data_url.indexOf('/') === 0 ? data.url : '/' + data_url;
+                        var index_title = -1;
+                        var index_content = -1;
+                        var first_occur = -1;
+                        // only match artiles with not empty titles and contents
+                        if (data_title !== '' && data_content !== '') {
+                            keywords.forEach(function (keyword, i) {
+                                index_title = data_title.indexOf(keyword);
+                                index_content = data_content.indexOf(keyword);
+                                if (index_title < 0 && index_content < 0) {
+                                    isMatch = false;
+                                } else {
+                                    if (index_content < 0) {
+                                        index_content = 0;
+                                    }
+                                    if (i === 0) {
+                                        first_occur = index_content;
+                                    }
+                                }
+                            });
+                        }
+                        // show search results
+                        if (isMatch) {
+                            str += "<li><a href='" + data_url + "' class='search-result-title'>" + data_title + "</a>";
+                            var content = data.content.trim().replace(/<[^>]+>/g, "");
+                            if (first_occur >= 0) {
+                                // cut out 100 characters
+                                var start = first_occur - 20;
+                                var end = first_occur + 80;
+                                if (start < 0) {
+                                    start = 0;
+                                }
+                                if (start === 0) {
+                                    end = 100;
+                                }
+                                if (end > content.length) {
+                                    end = content.length;
+                                }
+                                var match_content = content.substr(start, end);
+                                // highlight all keywords
+                                keywords.forEach(function (keyword) {
+                                    var regS = new RegExp(keyword, "gi");
+                                    match_content = match_content.replace(regS, "<em class=\"search-keyword\">" + keyword + "</em>");
+                                });
+
+                                str += "<p class=\"search-result\">" + match_content + "...</p>"
+                            }
+                            str += "</li>";
+                        }
+                    });
+                    str += "</ul>";
+                    $resultContent.innerHTML = str;
+                });
+            }
+        });
+    };
+
+    searchFunc('/search.xml', 'searchInput', 'searchResult');
+});
+</script>
+
+    <!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+</div>
+
+
+    <script src="/libs/materialize/materialize.min.js"></script>
+    <script src="/libs/masonry/masonry.pkgd.min.js"></script>
+    <script src="/libs/aos/aos.js"></script>
+    <script src="/libs/scrollprogress/scrollProgress.min.js"></script>
+    <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
+    <script src="/js/matery.js"></script>
+
+    <!-- Baidu Analytics -->
+
+    <!-- Baidu Push -->
+
+<script>
+    (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+
+    
+    <script src="/libs/others/clicklove.js" async="async"></script>
+    
+    
+    <script async src="/libs/others/busuanzi.pure.mini.js"></script>
+    
+
+    
+
+    
+
+	
+    
+
+    
+
+    
+
+    
+    <script src="/libs/instantpage/instantpage.js" type="module"></script>
+    
+
+    <script src="https://cdn.jsdelivr.net/gh/hyjwpk/hyjwpk.github.io@main/js/prism.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/gh/hyjwpk/hyjwpk.github.io@main/js/snow.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/gh/stevenjoezhang/live2d-widget@latest/autoload.js"></script>
+
+    <script type="text/javascript">
+        var OriginTitile=document.title,st;
+        document.addEventListener("visibilitychange",function(){
+            document.hidden?(document.title="<(￣︶￣)>偷偷藏起来",clearTimeout(st)):(document.title="(*/ω＼*)被发现了",st=setTimeout(function(){document.title=OriginTitile},3e3))
+        })
+    </script>
+
+</body>
+
+</html>
