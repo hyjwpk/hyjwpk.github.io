@@ -6,7 +6,7 @@
   <link href="http://hyjwpk.github.io/atom.xml" rel="self"/>
   
   <link href="http://hyjwpk.github.io/"/>
-  <updated>2021-10-08T05:53:56.000Z</updated>
+  <updated>2023-02-04T04:23:32.350Z</updated>
   <id>http://hyjwpk.github.io/</id>
   
   <author>
@@ -18,10 +18,10 @@
   
   <entry>
     <title>Hexo博客搭建教程</title>
-    <link href="http://hyjwpk.github.io/2021/08/08/jian-zhan/"/>
-    <id>http://hyjwpk.github.io/2021/08/08/jian-zhan/</id>
+    <link href="http://hyjwpk.github.io/2021/08/08/hexo-bo-ke-da-jian-jiao-cheng/"/>
+    <id>http://hyjwpk.github.io/2021/08/08/hexo-bo-ke-da-jian-jiao-cheng/</id>
     <published>2021-08-08T02:02:23.000Z</published>
-    <updated>2021-10-08T05:53:56.000Z</updated>
+    <updated>2023-02-04T04:23:32.350Z</updated>
     
     
       
@@ -35,6 +35,8 @@
     
     
     
+    <category term="教程" scheme="http://hyjwpk.github.io/categories/%E6%95%99%E7%A8%8B/"/>
+    
     
     <category term="blog" scheme="http://hyjwpk.github.io/tags/blog/"/>
     
@@ -43,11 +45,11 @@
   </entry>
   
   <entry>
-    <title>数独</title>
-    <link href="http://hyjwpk.github.io/2021/08/08/shu-du/"/>
-    <id>http://hyjwpk.github.io/2021/08/08/shu-du/</id>
+    <title>数独(程序设计II大作业)</title>
+    <link href="http://hyjwpk.github.io/2021/08/08/shu-du-cheng-xu-she-ji-ii-da-zuo-ye/"/>
+    <id>http://hyjwpk.github.io/2021/08/08/shu-du-cheng-xu-she-ji-ii-da-zuo-ye/</id>
     <published>2021-08-07T18:02:34.000Z</published>
-    <updated>2021-10-08T05:53:56.000Z</updated>
+    <updated>2023-02-04T04:23:45.204Z</updated>
     
     
       
@@ -60,6 +62,8 @@
     
     
     
+    <category term="项目" scheme="http://hyjwpk.github.io/categories/%E9%A1%B9%E7%9B%AE/"/>
+    
     
     <category term="大作业" scheme="http://hyjwpk.github.io/tags/%E5%A4%A7%E4%BD%9C%E4%B8%9A/"/>
     
@@ -67,10 +71,10 @@
   
   <entry>
     <title>OJ习题报告(上机2)</title>
-    <link href="http://hyjwpk.github.io/2021/08/07/oj-xi-ti/"/>
-    <id>http://hyjwpk.github.io/2021/08/07/oj-xi-ti/</id>
+    <link href="http://hyjwpk.github.io/2021/08/07/oj-xi-ti-bao-gao-shang-ji-2/"/>
+    <id>http://hyjwpk.github.io/2021/08/07/oj-xi-ti-bao-gao-shang-ji-2/</id>
     <published>2021-08-07T05:25:50.000Z</published>
-    <updated>2021-10-08T05:53:55.000Z</updated>
+    <updated>2023-02-04T04:23:52.061Z</updated>
     
     
       
@@ -82,6 +86,8 @@
       
     
     
+    
+    <category term="实验报告" scheme="http://hyjwpk.github.io/categories/%E5%AE%9E%E9%AA%8C%E6%8A%A5%E5%91%8A/"/>
     
     
     <category term="OJ" scheme="http://hyjwpk.github.io/tags/OJ/"/>
